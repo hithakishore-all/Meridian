@@ -1,0 +1,14 @@
+prompt_id,listing_id,tool_name,text
+orbit-brief,orbit,account_brief,Brief me on Halcyon Cold Chain before my 2pm
+orbit-signals,orbit,buying_signals,Which of my accounts show buying signals this week?
+orbit-sync,orbit,sync_to_crm,Log this brief and next step to the account
+conviction-memo,conviction,diligence_memo,"VC: draft a diligence memo on Halden Robotics, Series B"
+conviction-portfolio,conviction,portfolio_monitor,PE: which portfolio companies are off plan this quarter?
+conviction-export,conviction,export_to_deal_room,Export the Halden memo to the deal room
+credits-sim,credits,simulate_migration,Simulate moving our Pro plan from seats to credits at $0.10
+credits-solve,credits,price_solver,What credit price keeps revenue flat?
+credits-publish,credits,publish_price_book,Publish this price book for finance review
+readaroo-find,readaroo,search_tonight,What can I read tonight on supply chains?
+readaroo-borrow,readaroo,borrow_title,Borrow The Long Haul Ledger
+readaroo-kids,readaroo,family_shelf,Add a dinosaur picture book to Maya's shelf
+readaroo-fine,readaroo,pay_fine,Pay my $3.50 late fine

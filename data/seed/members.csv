@@ -1,0 +1,10 @@
+user_id,workspace_id,display_name,email,group_name,is_admin
+jordan,nw-freight,Jordan Lee,jordan.lee@northwind.example,Sales AEs,0
+riley,nw-freight,Riley Moss,riley.moss@northwind.example,Marketing,0
+priya,nw-freight,Priya Raman,priya.raman@northwind.example,IT,1
+marcus,nw-freight,Marcus Bell,marcus.bell@northwind.example,Procurement,0
+avery,nw-capital,Avery Chen,avery.chen@northwind-capital.example,Deal team,0
+noor,nw-capital,Noor Haddad,noor.haddad@northwind-capital.example,IT,1
+sam,nw-software,Sam Ortiz,sam.ortiz@northwind-software.example,Pricing,0
+kai,nw-software,Kai Brennan,kai.brennan@northwind-software.example,IT,1
+jordan,personal-jordan,Jordan Lee,jordan@home.example,Owner,1

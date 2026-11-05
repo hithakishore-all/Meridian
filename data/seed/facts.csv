@@ -1,0 +1,29 @@
+evidence_id,prompt_id,claim,source,as_of,kind,source_listing
+EV-ORBIT-BRIEF-01,orbit-brief,"Halcyon Cold Chain: 1,900 employees, Series D; open opportunity $184k at Stage 2.",CRM.ACCOUNTS A-20931; CRM.OPPS O-7781,2026-11-03,fact,
+EV-ORBIT-BRIEF-02,orbit-brief,"Opened 14 refrigerated-logistics roles in 30 days, mostly in Dallas.",Fieldnote Firmographics,2026-09-24,fact,fieldnote
+EV-ORBIT-BRIEF-03,orbit-brief,Replaced their routing vendor in August; that contract renews in Q1.,Fieldnote Firmographics,2026-09-24,fact,fieldnote
+EV-ORBIT-BRIEF-04,orbit-brief,Champion Dana Ortiz (VP Ops) attended the Oct 22 webinar.,CRM.CAMPAIGN_MEMBERS C-1182,2026-10-22,fact,
+EV-ORBIT-SIGNALS-01,orbit-signals,Halcyon Cold Chain: hiring surge and a routing vendor change.,Fieldnote Firmographics,2026-09-24,fact,fieldnote
+EV-ORBIT-SIGNALS-02,orbit-signals,Brisa Foods: new CFO who came from a current customer.,Fieldnote Firmographics,2026-09-24,fact,fieldnote
+EV-ORBIT-SIGNALS-03,orbit-signals,Tern Medical Supply: raised a $60M Series C.,Fieldnote Firmographics,2026-09-24,fact,fieldnote
+EV-ORBIT-SYNC-01,orbit-sync,Logged to account A-20931: brief attached; next step 'Send cutover-risk deck before Nov 12'.,CRM.ACCOUNTS A-20931,2026-11-04,action,
+EV-CONVICTION-MEMO-01,conviction-memo,"Market: warehouse picking robots, with 4 funded competitors.","Halden data room, deck p.4",2026-10-30,fact,
+EV-CONVICTION-MEMO-02,conviction-memo,"Traction: 38 paying sites, up from 11 a year ago.","PIPELINE.DEALS D-3307; Halden data room, deck p.7",2026-10-30,fact,
+EV-CONVICTION-MEMO-03,conviction-memo,Team: founders shipped two prior robotics products.,Fieldnote Firmographics,2026-09-24,fact,fieldnote
+EV-CONVICTION-MEMO-04,conviction-memo,Halden will be profitable by 2027.,,,uncited,
+EV-CONVICTION-MEMO-05,conviction-memo,Headcount could not be confirmed from the sources available.,,,unknown,
+EV-CONVICTION-PORTFOLIO-01,conviction-portfolio,Brightwater Pumps: revenue 11% under plan; two delayed municipal contracts.,PORTFOLIO.KPIS Q3 board pack,2026-10-15,fact,
+EV-CONVICTION-PORTFOLIO-02,conviction-portfolio,Kinley Dental Group: EBITDA margin 3 points under plan after a new-clinic ramp.,PORTFOLIO.KPIS Q3 board pack,2026-10-15,fact,
+EV-CONVICTION-EXPORT-01,conviction-export,Saved 'Halden Robotics Series B memo' to the Halden deal room.,DEALROOM D-3307,2026-11-04,action,
+EV-CREDITS-SIM-01,credits-sim,"Pro plan at $0.10 per credit, 1,240 accounts, 12 months replayed: net revenue -2.1% ($184k less on $8.8M).",BILLING.INVOICES Nov 2025 to Oct 2026,2026-10-31,fact,
+EV-CREDITS-SIM-02,credits-sim,"61% of accounts pay less, 27% pay more, 8% pay over 10% more.",Simulation run S-113,2026-11-04,fact,
+EV-CREDITS-SIM-03,credits-sim,AI summaries at 5 credits each make up 44% of credits used.,PRODUCT.USAGE_EVENTS; FEATURE_CREDITS v3,2026-10-31,fact,
+EV-CREDITS-SOLVE-01,credits-solve,$0.104 per credit keeps revenue within 0.5% of today.,Simulation run S-114,2026-11-04,fact,
+EV-CREDITS-SOLVE-02,credits-solve,Light users (under 20 seats) save 9% on average; heavy AI users pay 18% more.,Simulation run S-114; ACCOUNTS.PLANS,2026-11-04,fact,
+EV-CREDITS-SOLVE-03,credits-solve,41 accounts would see increases over $5k a year.,Simulation run S-114,2026-11-04,fact,
+EV-CREDITS-PUBLISH-01,credits-publish,Saved price book 'Pro credits v1 ($0.104)' for finance review. Nothing changes for customers until finance approves.,PRICING.PRICE_BOOKS PB-21,2026-11-04,action,
+EV-READAROO-FIND-01,readaroo-find,The Long Haul Ledger (ebook): available now on your Riverside card.,Riverside Public Library catalog,2026-11-04,fact,
+EV-READAROO-FIND-02,readaroo-find,Cold Chain Stories (audiobook): available now on your County card.,County Library catalog,2026-11-04,fact,
+EV-READAROO-BORROW-01,readaroo-borrow,"Borrowed The Long Haul Ledger. Due Nov 25, 2026.",Riverside Public Library loan L-88213,2026-11-04,action,
+EV-READAROO-KIDS-01,readaroo-kids,"Added Big Bones, Small Feet to Maya's shelf (ages 4 to 6).",Readaroo family shelf,2026-11-04,action,
+EV-READAROO-FINE-01,readaroo-fine,Pay $3.50 to Riverside Public Library on Readaroo's checkout.,https://readaroo.example/checkout?test=1,2026-11-04,link,

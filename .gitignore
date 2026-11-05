@@ -1,0 +1,14 @@
+# Secrets and keys never go in git
+.env
+.env.*
+!.env.example
+.keys/
+*.p8
+*.pem
+
+# Dependencies and local output
+node_modules/
+npm-debug.log*
+.DS_Store
+*.zip
+__pycache__/

@@ -1,0 +1,17 @@
+listing_id,tool_name,access,description,calls_per_run
+orbit,account_brief,read,One-page account summary with sources,2
+orbit,buying_signals,read,"Hiring, funding and tech-stack changes",2
+orbit,draft_outreach,read,First-touch email in the rep's voice,1
+orbit,sync_to_crm,write,Logs the brief and next step on the account,1
+conviction,diligence_memo,read,"VC: cited memo on market, traction, team and risks",2
+conviction,portfolio_monitor,read,PE: flags portfolio companies off plan,2
+conviction,add_on_screen,read,PE: ranks add-on targets for a platform company,2
+conviction,export_to_deal_room,write,Saves the memo to the deal's folder,1
+credits,simulate_migration,read,Replays history under a credit price book,2
+credits,price_solver,read,Finds the credit price for a revenue target,2
+credits,segment_impact,read,"Who pays more or less, by segment",1
+credits,publish_price_book,write,Saves the new price book for finance review,1
+readaroo,search_tonight,read,Titles you can borrow now across all your cards,1
+readaroo,borrow_title,write,Borrows from whichever card has it first,1
+readaroo,family_shelf,write,Adds a title to a child's kid-safe shelf,1
+readaroo,pay_fine,link,Opens Readaroo's own checkout,0

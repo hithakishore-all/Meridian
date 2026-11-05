@@ -1,0 +1,6 @@
+config_key,config_value
+DEMO_TODAY,2026-11-04
+MODEL,scripted
+FEE_PCT,15
+CALL_PRICE_USD,0.04
+MAX_VALIDATOR_RETRIES,2

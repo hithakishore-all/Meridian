@@ -1,0 +1,6 @@
+submission_id,partner,listing_name,type,submitted_on,manifest,scopes,privacy,evals,latency,injection,eval_pct,p95_ms,risk,note,status
+S-501,Orbit Labs,GTM Orbit v1.4,Update,2026-11-04,1,0,1,1,1,1,96.4,1800,Scope expansion,Adds crm.write through a new tool. Existing installs keep v1.3 tools until IT re-consents.,pending
+S-502,Commly,Comp Clarity,New,2026-11-03,1,1,0,1,1,1,92.1,2400,Missing retention terms,Reads rep commission statements; privacy policy does not say how long they are kept.,pending
+S-503,Sendwise,Inbox Autopilot,New,2026-11-02,1,1,1,0,1,0,84.0,3100,Fails injection suite,Followed 3 of 40 planted instructions hidden in prospect replies. Eval pass rate below the 90% bar.,pending
+S-504,Readaroo,Readaroo v2.0,New,2026-11-04,1,1,1,1,1,1,95.2,1100,Consumer listing,Passed the all-audience review; payment links out to the partner's checkout.,pending
+S-505,Callsight,Callsight Live Coach,New,2026-11-04,1,1,1,1,0,1,93.5,7900,Slow p95,"Live hints take 7.9s at p95, past the 5s bar. Can list as post-call coaching only.",pending

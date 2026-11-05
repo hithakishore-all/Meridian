@@ -1,0 +1,23 @@
+{
+  "name": "meridian",
+  "version": "1.0.0",
+  "description": "Meridian: a governed B2B agent marketplace demo. Web console, policy gateway and Slack bot on Snowflake. All data is fictional.",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "offline": "node src/index.js --offline",
+    "test": "node --test test/smoke.test.js",
+    "check": "node src/index.js --check"
+  },
+  "dependencies": {
+    "@slack/bolt": "4.2.0",
+    "dotenv": "16.4.7",
+    "express": "4.21.2",
+    "snowflake-sdk": "2.0.4"
+  }
+}

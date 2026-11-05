@@ -1,0 +1,4 @@
+listing_id,installs,weekly_active_pct,likely_cause
+rampcoach,1120,49,Deployed for managers only; the new-hire group was never enabled
+winloss,760,41,Interview emails land in spam for 18% of installs
+launchpilot,2875,36,Bought by marketing; reps never see it in their tools

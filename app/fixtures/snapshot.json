@@ -1,0 +1,1303 @@
+{
+ "adoption": [
+  {
+   "installs": 1120,
+   "likely_cause": "Deployed for managers only; the new-hire group was never enabled",
+   "listing_id": "rampcoach",
+   "weekly_active_pct": 49
+  },
+  {
+   "installs": 760,
+   "likely_cause": "Interview emails land in spam for 18% of installs",
+   "listing_id": "winloss",
+   "weekly_active_pct": 41
+  },
+  {
+   "installs": 2875,
+   "likely_cause": "Bought by marketing; reps never see it in their tools",
+   "listing_id": "launchpilot",
+   "weekly_active_pct": 36
+  }
+ ],
+ "bookings_weekly": [
+  {
+   "bookings_usd": 1420000,
+   "week_start": "2026-09-07"
+  },
+  {
+   "bookings_usd": 1510000,
+   "week_start": "2026-09-14"
+  },
+  {
+   "bookings_usd": 1580000,
+   "week_start": "2026-09-21"
+  },
+  {
+   "bookings_usd": 1740000,
+   "week_start": "2026-09-28"
+  },
+  {
+   "bookings_usd": 1810000,
+   "week_start": "2026-10-05"
+  },
+  {
+   "bookings_usd": 1960000,
+   "week_start": "2026-10-12"
+  },
+  {
+   "bookings_usd": 2080000,
+   "week_start": "2026-10-19"
+  },
+  {
+   "bookings_usd": 2210000,
+   "week_start": "2026-10-26"
+  },
+  {
+   "bookings_usd": 2370000,
+   "week_start": "2026-11-02"
+  }
+ ],
+ "config": [
+  {
+   "config_key": "DEMO_TODAY",
+   "config_value": "2026-11-04"
+  },
+  {
+   "config_key": "MODEL",
+   "config_value": "scripted"
+  },
+  {
+   "config_key": "FEE_PCT",
+   "config_value": "15"
+  },
+  {
+   "config_key": "CALL_PRICE_USD",
+   "config_value": "0.04"
+  },
+  {
+   "config_key": "MAX_VALIDATOR_RETRIES",
+   "config_value": "2"
+  }
+ ],
+ "facts": [
+  {
+   "as_of": "2026-11-03",
+   "claim": "Halcyon Cold Chain: 1,900 employees, Series D; open opportunity $184k at Stage 2.",
+   "evidence_id": "EV-ORBIT-BRIEF-01",
+   "kind": "fact",
+   "prompt_id": "orbit-brief",
+   "source": "CRM.ACCOUNTS A-20931; CRM.OPPS O-7781",
+   "source_listing": ""
+  },
+  {
+   "as_of": "2026-09-24",
+   "claim": "Opened 14 refrigerated-logistics roles in 30 days, mostly in Dallas.",
+   "evidence_id": "EV-ORBIT-BRIEF-02",
+   "kind": "fact",
+   "prompt_id": "orbit-brief",
+   "source": "Fieldnote Firmographics",
+   "source_listing": "fieldnote"
+  },
+  {
+   "as_of": "2026-09-24",
+   "claim": "Replaced their routing vendor in August; that contract renews in Q1.",
+   "evidence_id": "EV-ORBIT-BRIEF-03",
+   "kind": "fact",
+   "prompt_id": "orbit-brief",
+   "source": "Fieldnote Firmographics",
+   "source_listing": "fieldnote"
+  },
+  {
+   "as_of": "2026-10-22",
+   "claim": "Champion Dana Ortiz (VP Ops) attended the Oct 22 webinar.",
+   "evidence_id": "EV-ORBIT-BRIEF-04",
+   "kind": "fact",
+   "prompt_id": "orbit-brief",
+   "source": "CRM.CAMPAIGN_MEMBERS C-1182",
+   "source_listing": ""
+  },
+  {
+   "as_of": "2026-09-24",
+   "claim": "Halcyon Cold Chain: hiring surge and a routing vendor change.",
+   "evidence_id": "EV-ORBIT-SIGNALS-01",
+   "kind": "fact",
+   "prompt_id": "orbit-signals",
+   "source": "Fieldnote Firmographics",
+   "source_listing": "fieldnote"
+  },
+  {
+   "as_of": "2026-09-24",
+   "claim": "Brisa Foods: new CFO who came from a current customer.",
+   "evidence_id": "EV-ORBIT-SIGNALS-02",
+   "kind": "fact",
+   "prompt_id": "orbit-signals",
+   "source": "Fieldnote Firmographics",
+   "source_listing": "fieldnote"
+  },
+  {
+   "as_of": "2026-09-24",
+   "claim": "Tern Medical Supply: raised a $60M Series C.",
+   "evidence_id": "EV-ORBIT-SIGNALS-03",
+   "kind": "fact",
+   "prompt_id": "orbit-signals",
+   "source": "Fieldnote Firmographics",
+   "source_listing": "fieldnote"
+  },
+  {
+   "as_of": "2026-11-04",
+   "claim": "Logged to account A-20931: brief attached; next step 'Send cutover-risk deck before Nov 12'.",
+   "evidence_id": "EV-ORBIT-SYNC-01",
+   "kind": "action",
+   "prompt_id": "orbit-sync",
+   "source": "CRM.ACCOUNTS A-20931",
+   "source_listing": ""
+  },
+  {
+   "as_of": "2026-10-30",
+   "claim": "Market: warehouse picking robots, with 4 funded competitors.",
+   "evidence_id": "EV-CONVICTION-MEMO-01",
+   "kind": "fact",
+   "prompt_id": "conviction-memo",
+   "source": "Halden data room, deck p.4",
+   "source_listing": ""
+  },
+  {
+   "as_of": "2026-10-30",
+   "claim": "Traction: 38 paying sites, up from 11 a year ago.",
+   "evidence_id": "EV-CONVICTION-MEMO-02",
+   "kind": "fact",
+   "prompt_id": "conviction-memo",
+   "source": "PIPELINE.DEALS D-3307; Halden data room, deck p.7",
+   "source_listing": ""
+  },
+  {
+   "as_of": "2026-09-24",
+   "claim": "Team: founders shipped two prior robotics products.",
+   "evidence_id": "EV-CONVICTION-MEMO-03",
+   "kind": "fact",
+   "prompt_id": "conviction-memo",
+   "source": "Fieldnote Firmographics",
+   "source_listing": "fieldnote"
+  },
+  {
+   "as_of": "",
+   "claim": "Halden will be profitable by 2027.",
+   "evidence_id": "EV-CONVICTION-MEMO-04",
+   "kind": "uncited",
+   "prompt_id": "conviction-memo",
+   "source": "",
+   "source_listing": ""
+  },
+  {
+   "as_of": "",
+   "claim": "Headcount could not be confirmed from the sources available.",
+   "evidence_id": "EV-CONVICTION-MEMO-05",
+   "kind": "unknown",
+   "prompt_id": "conviction-memo",
+   "source": "",
+   "source_listing": ""
+  },
+  {
+   "as_of": "2026-10-15",
+   "claim": "Brightwater Pumps: revenue 11% under plan; two delayed municipal contracts.",
+   "evidence_id": "EV-CONVICTION-PORTFOLIO-01",
+   "kind": "fact",
+   "prompt_id": "conviction-portfolio",
+   "source": "PORTFOLIO.KPIS Q3 board pack",
+   "source_listing": ""
+  },
+  {
+   "as_of": "2026-10-15",
+   "claim": "Kinley Dental Group: EBITDA margin 3 points under plan after a new-clinic ramp.",
+   "evidence_id": "EV-CONVICTION-PORTFOLIO-02",
+   "kind": "fact",
+   "prompt_id": "conviction-portfolio",
+   "source": "PORTFOLIO.KPIS Q3 board pack",
+   "source_listing": ""
+  },
+  {
+   "as_of": "2026-11-04",
+   "claim": "Saved 'Halden Robotics Series B memo' to the Halden deal room.",
+   "evidence_id": "EV-CONVICTION-EXPORT-01",
+   "kind": "action",
+   "prompt_id": "conviction-export",
+   "source": "DEALROOM D-3307",
+   "source_listing": ""
+  },
+  {
+   "as_of": "2026-10-31",
+   "claim": "Pro plan at $0.10 per credit, 1,240 accounts, 12 months replayed: net revenue -2.1% ($184k less on $8.8M).",
+   "evidence_id": "EV-CREDITS-SIM-01",
+   "kind": "fact",
+   "prompt_id": "credits-sim",
+   "source": "BILLING.INVOICES Nov 2025 to Oct 2026",
+   "source_listing": ""
+  },
+  {
+   "as_of": "2026-11-04",
+   "claim": "61% of accounts pay less, 27% pay more, 8% pay over 10% more.",
+   "evidence_id": "EV-CREDITS-SIM-02",
+   "kind": "fact",
+   "prompt_id": "credits-sim",
+   "source": "Simulation run S-113",
+   "source_listing": ""
+  },
+  {
+   "as_of": "2026-10-31",
+   "claim": "AI summaries at 5 credits each make up 44% of credits used.",
+   "evidence_id": "EV-CREDITS-SIM-03",
+   "kind": "fact",
+   "prompt_id": "credits-sim",
+   "source": "PRODUCT.USAGE_EVENTS; FEATURE_CREDITS v3",
+   "source_listing": ""
+  },
+  {
+   "as_of": "2026-11-04",
+   "claim": "$0.104 per credit keeps revenue within 0.5% of today.",
+   "evidence_id": "EV-CREDITS-SOLVE-01",
+   "kind": "fact",
+   "prompt_id": "credits-solve",
+   "source": "Simulation run S-114",
+   "source_listing": ""
+  },
+  {
+   "as_of": "2026-11-04",
+   "claim": "Light users (under 20 seats) save 9% on average; heavy AI users pay 18% more.",
+   "evidence_id": "EV-CREDITS-SOLVE-02",
+   "kind": "fact",
+   "prompt_id": "credits-solve",
+   "source": "Simulation run S-114; ACCOUNTS.PLANS",
+   "source_listing": ""
+  },
+  {
+   "as_of": "2026-11-04",
+   "claim": "41 accounts would see increases over $5k a year.",
+   "evidence_id": "EV-CREDITS-SOLVE-03",
+   "kind": "fact",
+   "prompt_id": "credits-solve",
+   "source": "Simulation run S-114",
+   "source_listing": ""
+  },
+  {
+   "as_of": "2026-11-04",
+   "claim": "Saved price book 'Pro credits v1 ($0.104)' for finance review. Nothing changes for customers until finance approves.",
+   "evidence_id": "EV-CREDITS-PUBLISH-01",
+   "kind": "action",
+   "prompt_id": "credits-publish",
+   "source": "PRICING.PRICE_BOOKS PB-21",
+   "source_listing": ""
+  },
+  {
+   "as_of": "2026-11-04",
+   "claim": "The Long Haul Ledger (ebook): available now on your Riverside card.",
+   "evidence_id": "EV-READAROO-FIND-01",
+   "kind": "fact",
+   "prompt_id": "readaroo-find",
+   "source": "Riverside Public Library catalog",
+   "source_listing": ""
+  },
+  {
+   "as_of": "2026-11-04",
+   "claim": "Cold Chain Stories (audiobook): available now on your County card.",
+   "evidence_id": "EV-READAROO-FIND-02",
+   "kind": "fact",
+   "prompt_id": "readaroo-find",
+   "source": "County Library catalog",
+   "source_listing": ""
+  },
+  {
+   "as_of": "2026-11-04",
+   "claim": "Borrowed The Long Haul Ledger. Due Nov 25, 2026.",
+   "evidence_id": "EV-READAROO-BORROW-01",
+   "kind": "action",
+   "prompt_id": "readaroo-borrow",
+   "source": "Riverside Public Library loan L-88213",
+   "source_listing": ""
+  },
+  {
+   "as_of": "2026-11-04",
+   "claim": "Added Big Bones, Small Feet to Maya's shelf (ages 4 to 6).",
+   "evidence_id": "EV-READAROO-KIDS-01",
+   "kind": "action",
+   "prompt_id": "readaroo-kids",
+   "source": "Readaroo family shelf",
+   "source_listing": ""
+  },
+  {
+   "as_of": "2026-11-04",
+   "claim": "Pay $3.50 to Riverside Public Library on Readaroo's checkout.",
+   "evidence_id": "EV-READAROO-FINE-01",
+   "kind": "link",
+   "prompt_id": "readaroo-fine",
+   "source": "https://readaroo.example/checkout?test=1",
+   "source_listing": ""
+  }
+ ],
+ "funnel": [
+  {
+   "count": 48200,
+   "ord": 1,
+   "stage": "Listing views"
+  },
+  {
+   "count": 6120,
+   "ord": 2,
+   "stage": "Trials started"
+  },
+  {
+   "count": 2310,
+   "ord": 3,
+   "stage": "Purchased"
+  },
+  {
+   "count": 1980,
+   "ord": 4,
+   "stage": "Deployed by IT"
+  },
+  {
+   "count": 1240,
+   "ord": 5,
+   "stage": "Weekly active"
+  }
+ ],
+ "group_policies": [
+  {
+   "enabled": 1,
+   "group_name": "Sales AEs",
+   "listing_id": "orbit",
+   "workspace_id": "nw-freight"
+  },
+  {
+   "enabled": 1,
+   "group_name": "SDRs",
+   "listing_id": "orbit",
+   "workspace_id": "nw-freight"
+  },
+  {
+   "enabled": 1,
+   "group_name": "RevOps",
+   "listing_id": "orbit",
+   "workspace_id": "nw-freight"
+  },
+  {
+   "enabled": 0,
+   "group_name": "Marketing",
+   "listing_id": "orbit",
+   "workspace_id": "nw-freight"
+  },
+  {
+   "enabled": 1,
+   "group_name": "Deal team",
+   "listing_id": "conviction",
+   "workspace_id": "nw-capital"
+  },
+  {
+   "enabled": 1,
+   "group_name": "Pricing",
+   "listing_id": "credits",
+   "workspace_id": "nw-software"
+  },
+  {
+   "enabled": 1,
+   "group_name": "Owner",
+   "listing_id": "readaroo",
+   "workspace_id": "personal-jordan"
+  }
+ ],
+ "installs": [
+  {
+   "approved_by": "",
+   "approved_on": "",
+   "human_write": 1,
+   "listing_id": "orbit",
+   "pay_via": "",
+   "pii_mask": 1,
+   "plan": "",
+   "policy_version": 1,
+   "spend_cap_usd": 2000,
+   "status": "not_purchased",
+   "workspace_id": "nw-freight"
+  },
+  {
+   "approved_by": "noor",
+   "approved_on": "2026-10-12",
+   "human_write": 1,
+   "listing_id": "conviction",
+   "pay_via": "commitment",
+   "pii_mask": 1,
+   "plan": "annual",
+   "policy_version": 3,
+   "spend_cap_usd": 3000,
+   "status": "approved",
+   "workspace_id": "nw-capital"
+  },
+  {
+   "approved_by": "kai",
+   "approved_on": "2026-09-02",
+   "human_write": 1,
+   "listing_id": "credits",
+   "pay_via": "invoice",
+   "pii_mask": 1,
+   "plan": "annual",
+   "policy_version": 2,
+   "spend_cap_usd": 1500,
+   "status": "approved",
+   "workspace_id": "nw-software"
+  },
+  {
+   "approved_by": "jordan",
+   "approved_on": "2026-10-20",
+   "human_write": 1,
+   "listing_id": "readaroo",
+   "pay_via": "none",
+   "pii_mask": 0,
+   "plan": "free",
+   "policy_version": 1,
+   "spend_cap_usd": 0,
+   "status": "approved",
+   "workspace_id": "personal-jordan"
+  }
+ ],
+ "listings": [
+  {
+   "category": "Prospecting",
+   "consumer": 0,
+   "data_refreshed_on": "",
+   "description": "Account research, buying signals and first-touch outreach for B2B sellers.",
+   "eval_pct": 96.4,
+   "featured": 1,
+   "freshness_rule_days": "",
+   "installs": 1284,
+   "keywords": "account research prospect outreach pipeline buying signal sales crm brief call prep",
+   "listing_id": "orbit",
+   "name": "GTM Orbit",
+   "p95_ms": 1800,
+   "price_model": "Usage or annual private offer",
+   "publisher": "Orbit Labs",
+   "soc2": "Type II",
+   "weekly_active_pct": 71
+  },
+  {
+   "category": "Investing",
+   "consumer": 0,
+   "data_refreshed_on": "",
+   "description": "Investment intelligence for VC and PE firms: cited diligence memos, portfolio monitoring and add-on screening.",
+   "eval_pct": 94.8,
+   "featured": 1,
+   "freshness_rule_days": "",
+   "installs": 612,
+   "keywords": "investment intelligence diligence memo venture private equity vc pe portfolio add-on",
+   "listing_id": "conviction",
+   "name": "Conviction AI",
+   "p95_ms": 3600,
+   "price_model": "Per seat, annual",
+   "publisher": "Conviction Labs",
+   "soc2": "Type II",
+   "weekly_active_pct": 66
+  },
+  {
+   "category": "Pricing",
+   "consumer": 0,
+   "data_refreshed_on": "",
+   "description": "Simulates moving a seat-based plan to credits using billing and usage history.",
+   "eval_pct": 97.1,
+   "featured": 1,
+   "freshness_rule_days": "",
+   "installs": 214,
+   "keywords": "pricing credits usage based seat migration simulation monetization billing",
+   "listing_id": "credits",
+   "name": "Credit Simulator",
+   "p95_ms": 4200,
+   "price_model": "Annual, per workspace",
+   "publisher": "Credit Simulator",
+   "soc2": "Type II",
+   "weekly_active_pct": 79
+  },
+  {
+   "category": "Consumer",
+   "consumer": 1,
+   "data_refreshed_on": "",
+   "description": "An online library: one shelf across library cards, read-tonight search, kid-safe family shelves.",
+   "eval_pct": 95.2,
+   "featured": 1,
+   "freshness_rule_days": "",
+   "installs": 48200,
+   "keywords": "library books ebook audiobook borrow reading kids family",
+   "listing_id": "readaroo",
+   "name": "Readaroo",
+   "p95_ms": 1100,
+   "price_model": "Free; fines paid to libraries",
+   "publisher": "Readaroo",
+   "soc2": "Type II",
+   "weekly_active_pct": 58
+  },
+  {
+   "category": "Hobbies",
+   "consumer": 1,
+   "data_refreshed_on": "",
+   "description": "Knit and crochet patterns searchable by the yarn you own, resized to your gauge, with a row counter.",
+   "eval_pct": 93.0,
+   "featured": 0,
+   "freshness_rule_days": "",
+   "installs": 31800,
+   "keywords": "knit knitting crochet pattern yarn gauge row counter craft",
+   "listing_id": "purlwise",
+   "name": "Purlwise",
+   "p95_ms": 900,
+   "price_model": "Free with paid patterns",
+   "publisher": "Purlwise",
+   "soc2": "Type II",
+   "weekly_active_pct": 63
+  },
+  {
+   "category": "Hobbies",
+   "consumer": 1,
+   "data_refreshed_on": "",
+   "description": "Daily watercolor prompts, mixing recipes from your paints, and feedback on a photo of your piece.",
+   "eval_pct": 91.5,
+   "featured": 0,
+   "freshness_rule_days": "",
+   "installs": 9700,
+   "keywords": "watercolor painting palette mixing art",
+   "listing_id": "washbloom",
+   "name": "Wash & Bloom",
+   "p95_ms": 1300,
+   "price_model": "Free",
+   "publisher": "Wash & Bloom",
+   "soc2": "Type II",
+   "weekly_active_pct": 47
+  },
+  {
+   "category": "Conversation intelligence",
+   "consumer": 0,
+   "data_refreshed_on": "",
+   "description": "Summarizes sales calls, flags competitor and risk language, suggests one coaching moment per call.",
+   "eval_pct": 95.5,
+   "featured": 0,
+   "freshness_rule_days": "",
+   "installs": 2940,
+   "keywords": "conversation intelligence call summary coaching competitor objection",
+   "listing_id": "callsight",
+   "name": "Callsight",
+   "p95_ms": 2100,
+   "price_model": "Per seat",
+   "publisher": "Callsight",
+   "soc2": "Type II",
+   "weekly_active_pct": 74
+  },
+  {
+   "category": "Deal execution",
+   "consumer": 0,
+   "data_refreshed_on": "",
+   "description": "Turns calls and emails into MEDDICC deal notes, next steps and risks on the opportunity.",
+   "eval_pct": 94.1,
+   "featured": 0,
+   "freshness_rule_days": "",
+   "installs": 1870,
+   "keywords": "deal notes meddicc qualification next steps crm",
+   "listing_id": "dealnote",
+   "name": "Dealnote",
+   "p95_ms": 1900,
+   "price_model": "Per seat",
+   "publisher": "Dealnote",
+   "soc2": "Type II",
+   "weekly_active_pct": 69
+  },
+  {
+   "category": "Planning",
+   "consumer": 0,
+   "data_refreshed_on": "",
+   "description": "Quota and territory planning from ramp and attrition, with quota letters ready for finance.",
+   "eval_pct": 92.8,
+   "featured": 0,
+   "freshness_rule_days": "",
+   "installs": 540,
+   "keywords": "quota planning territory capacity headcount ramp",
+   "listing_id": "quotacraft",
+   "name": "Quotacraft",
+   "p95_ms": 2600,
+   "price_model": "Annual",
+   "publisher": "Quotacraft",
+   "soc2": "Type II",
+   "weekly_active_pct": 61
+  },
+  {
+   "category": "Forecasting",
+   "consumer": 0,
+   "data_refreshed_on": "",
+   "description": "Rolls up the weekly forecast and explains every gap between commits and deal evidence.",
+   "eval_pct": 94.6,
+   "featured": 0,
+   "freshness_rule_days": "",
+   "installs": 1310,
+   "keywords": "forecast commit roll up coverage",
+   "listing_id": "forecastpulse",
+   "name": "Forecast Pulse",
+   "p95_ms": 2300,
+   "price_model": "Per seat",
+   "publisher": "Pulse Analytics",
+   "soc2": "Type II",
+   "weekly_active_pct": 72
+  },
+  {
+   "category": "Data",
+   "consumer": 0,
+   "data_refreshed_on": "2026-09-24",
+   "description": "Company size, funding, tech stack and hiring signals. Agents call it as a tool.",
+   "eval_pct": 97.9,
+   "featured": 0,
+   "freshness_rule_days": 30,
+   "installs": 3410,
+   "keywords": "firmographic company data enrichment hiring funding",
+   "listing_id": "fieldnote",
+   "name": "Fieldnote Firmographics",
+   "p95_ms": 600,
+   "price_model": "Per call",
+   "publisher": "Fieldnote Data",
+   "soc2": "Type II",
+   "weekly_active_pct": 64
+  },
+  {
+   "category": "RevOps",
+   "consumer": 0,
+   "data_refreshed_on": "",
+   "description": "Finds stale opportunities and duplicates and proposes fixes in one approval batch.",
+   "eval_pct": 93.3,
+   "featured": 0,
+   "freshness_rule_days": "",
+   "installs": 2050,
+   "keywords": "revops crm hygiene data quality pipeline duplicates",
+   "listing_id": "pipehealth",
+   "name": "Pipeline Steward",
+   "p95_ms": 1700,
+   "price_model": "Usage",
+   "publisher": "Steward Ops",
+   "soc2": "Type II",
+   "weekly_active_pct": 63
+  },
+  {
+   "category": "Prospecting",
+   "consumer": 0,
+   "data_refreshed_on": "",
+   "description": "Scores accounts against your ideal customer profile with the top three reasons.",
+   "eval_pct": 91.2,
+   "featured": 0,
+   "freshness_rule_days": "",
+   "installs": 980,
+   "keywords": "icp account scoring targeting segmentation",
+   "listing_id": "icpscout",
+   "name": "ICP Scout",
+   "p95_ms": 1500,
+   "price_model": "Usage",
+   "publisher": "Scout Data",
+   "soc2": "Not provided",
+   "weekly_active_pct": 57
+  },
+  {
+   "category": "Conversation intelligence",
+   "consumer": 0,
+   "data_refreshed_on": "",
+   "description": "Interviews won and lost buyers by email and trends the reasons by segment.",
+   "eval_pct": 92.0,
+   "featured": 0,
+   "freshness_rule_days": "",
+   "installs": 760,
+   "keywords": "win loss analysis competitor interviews",
+   "listing_id": "winloss",
+   "name": "Win-Loss Lens",
+   "p95_ms": 2800,
+   "price_model": "Annual",
+   "publisher": "Lens Research",
+   "soc2": "Type II",
+   "weekly_active_pct": 41
+  },
+  {
+   "category": "Customer success",
+   "consumer": 0,
+   "data_refreshed_on": "",
+   "description": "Flags renewals at risk from usage drops and drafts a save plan.",
+   "eval_pct": 94.0,
+   "featured": 0,
+   "freshness_rule_days": "",
+   "installs": 1450,
+   "keywords": "renewal churn retention expansion",
+   "listing_id": "renewal",
+   "name": "Renewal Radar",
+   "p95_ms": 1600,
+   "price_model": "Per seat",
+   "publisher": "Radar CS",
+   "soc2": "Type II",
+   "weekly_active_pct": 67
+  },
+  {
+   "category": "Enablement",
+   "consumer": 0,
+   "data_refreshed_on": "",
+   "description": "30-60-90 plans for new reps with quizzes on real calls.",
+   "eval_pct": 92.4,
+   "featured": 0,
+   "freshness_rule_days": "",
+   "installs": 1120,
+   "keywords": "enablement onboarding ramp coaching",
+   "listing_id": "rampcoach",
+   "name": "Ramp Coach",
+   "p95_ms": 2000,
+   "price_model": "Per seat",
+   "publisher": "Ramp",
+   "soc2": "Type II",
+   "weekly_active_pct": 49
+  },
+  {
+   "category": "Deal execution",
+   "consumer": 0,
+   "data_refreshed_on": "",
+   "description": "Builds quotes within discount guardrails and explains exceptions to deal desk.",
+   "eval_pct": 97.8,
+   "featured": 0,
+   "freshness_rule_days": "",
+   "installs": 940,
+   "keywords": "quote cpq pricing discount deal desk",
+   "listing_id": "pricewell",
+   "name": "Pricewell",
+   "p95_ms": 1200,
+   "price_model": "Usage + annual",
+   "publisher": "Pricewell",
+   "soc2": "Type II",
+   "weekly_active_pct": 55
+  },
+  {
+   "category": "Partnerships",
+   "consumer": 0,
+   "data_refreshed_on": "",
+   "description": "Finds account overlap with partners and suggests co-sell plays without sharing raw lists.",
+   "eval_pct": 93.7,
+   "featured": 0,
+   "freshness_rule_days": "",
+   "installs": 690,
+   "keywords": "partner co-sell overlap alliances",
+   "listing_id": "cosell",
+   "name": "Co-sell Map",
+   "p95_ms": 1400,
+   "price_model": "Annual",
+   "publisher": "Overlap Labs",
+   "soc2": "Type II",
+   "weekly_active_pct": 52
+  },
+  {
+   "category": "Enablement",
+   "consumer": 0,
+   "data_refreshed_on": "",
+   "description": "Turns a launch brief into talk tracks and battlecards and tracks use on calls.",
+   "eval_pct": 90.9,
+   "featured": 0,
+   "freshness_rule_days": "",
+   "installs": 2875,
+   "keywords": "product launch battlecard talk track",
+   "listing_id": "launchpilot",
+   "name": "Launch Pilot",
+   "p95_ms": 2200,
+   "price_model": "Per seat",
+   "publisher": "Pilot GTM",
+   "soc2": "Type II",
+   "weekly_active_pct": 36
+  }
+ ],
+ "members": [
+  {
+   "display_name": "Jordan Lee",
+   "email": "jordan.lee@northwind.example",
+   "group_name": "Sales AEs",
+   "is_admin": 0,
+   "user_id": "jordan",
+   "workspace_id": "nw-freight"
+  },
+  {
+   "display_name": "Riley Moss",
+   "email": "riley.moss@northwind.example",
+   "group_name": "Marketing",
+   "is_admin": 0,
+   "user_id": "riley",
+   "workspace_id": "nw-freight"
+  },
+  {
+   "display_name": "Priya Raman",
+   "email": "priya.raman@northwind.example",
+   "group_name": "IT",
+   "is_admin": 1,
+   "user_id": "priya",
+   "workspace_id": "nw-freight"
+  },
+  {
+   "display_name": "Marcus Bell",
+   "email": "marcus.bell@northwind.example",
+   "group_name": "Procurement",
+   "is_admin": 0,
+   "user_id": "marcus",
+   "workspace_id": "nw-freight"
+  },
+  {
+   "display_name": "Avery Chen",
+   "email": "avery.chen@northwind-capital.example",
+   "group_name": "Deal team",
+   "is_admin": 0,
+   "user_id": "avery",
+   "workspace_id": "nw-capital"
+  },
+  {
+   "display_name": "Noor Haddad",
+   "email": "noor.haddad@northwind-capital.example",
+   "group_name": "IT",
+   "is_admin": 1,
+   "user_id": "noor",
+   "workspace_id": "nw-capital"
+  },
+  {
+   "display_name": "Sam Ortiz",
+   "email": "sam.ortiz@northwind-software.example",
+   "group_name": "Pricing",
+   "is_admin": 0,
+   "user_id": "sam",
+   "workspace_id": "nw-software"
+  },
+  {
+   "display_name": "Kai Brennan",
+   "email": "kai.brennan@northwind-software.example",
+   "group_name": "IT",
+   "is_admin": 1,
+   "user_id": "kai",
+   "workspace_id": "nw-software"
+  },
+  {
+   "display_name": "Jordan Lee",
+   "email": "jordan@home.example",
+   "group_name": "Owner",
+   "is_admin": 1,
+   "user_id": "jordan",
+   "workspace_id": "personal-jordan"
+  }
+ ],
+ "prompts": [
+  {
+   "listing_id": "orbit",
+   "prompt_id": "orbit-brief",
+   "text": "Brief me on Halcyon Cold Chain before my 2pm",
+   "tool_name": "account_brief"
+  },
+  {
+   "listing_id": "orbit",
+   "prompt_id": "orbit-signals",
+   "text": "Which of my accounts show buying signals this week?",
+   "tool_name": "buying_signals"
+  },
+  {
+   "listing_id": "orbit",
+   "prompt_id": "orbit-sync",
+   "text": "Log this brief and next step to the account",
+   "tool_name": "sync_to_crm"
+  },
+  {
+   "listing_id": "conviction",
+   "prompt_id": "conviction-memo",
+   "text": "VC: draft a diligence memo on Halden Robotics, Series B",
+   "tool_name": "diligence_memo"
+  },
+  {
+   "listing_id": "conviction",
+   "prompt_id": "conviction-portfolio",
+   "text": "PE: which portfolio companies are off plan this quarter?",
+   "tool_name": "portfolio_monitor"
+  },
+  {
+   "listing_id": "conviction",
+   "prompt_id": "conviction-export",
+   "text": "Export the Halden memo to the deal room",
+   "tool_name": "export_to_deal_room"
+  },
+  {
+   "listing_id": "credits",
+   "prompt_id": "credits-sim",
+   "text": "Simulate moving our Pro plan from seats to credits at $0.10",
+   "tool_name": "simulate_migration"
+  },
+  {
+   "listing_id": "credits",
+   "prompt_id": "credits-solve",
+   "text": "What credit price keeps revenue flat?",
+   "tool_name": "price_solver"
+  },
+  {
+   "listing_id": "credits",
+   "prompt_id": "credits-publish",
+   "text": "Publish this price book for finance review",
+   "tool_name": "publish_price_book"
+  },
+  {
+   "listing_id": "readaroo",
+   "prompt_id": "readaroo-find",
+   "text": "What can I read tonight on supply chains?",
+   "tool_name": "search_tonight"
+  },
+  {
+   "listing_id": "readaroo",
+   "prompt_id": "readaroo-borrow",
+   "text": "Borrow The Long Haul Ledger",
+   "tool_name": "borrow_title"
+  },
+  {
+   "listing_id": "readaroo",
+   "prompt_id": "readaroo-kids",
+   "text": "Add a dinosaur picture book to Maya's shelf",
+   "tool_name": "family_shelf"
+  },
+  {
+   "listing_id": "readaroo",
+   "prompt_id": "readaroo-fine",
+   "text": "Pay my $3.50 late fine",
+   "tool_name": "pay_fine"
+  }
+ ],
+ "submissions": [
+  {
+   "eval_pct": 96.4,
+   "evals": 1,
+   "injection": 1,
+   "latency": 1,
+   "listing_name": "GTM Orbit v1.4",
+   "manifest": 1,
+   "note": "Adds crm.write through a new tool. Existing installs keep v1.3 tools until IT re-consents.",
+   "p95_ms": 1800,
+   "partner": "Orbit Labs",
+   "privacy": 1,
+   "risk": "Scope expansion",
+   "scopes": 0,
+   "status": "pending",
+   "submission_id": "S-501",
+   "submitted_on": "2026-11-04",
+   "type": "Update"
+  },
+  {
+   "eval_pct": 92.1,
+   "evals": 1,
+   "injection": 1,
+   "latency": 1,
+   "listing_name": "Comp Clarity",
+   "manifest": 1,
+   "note": "Reads rep commission statements; privacy policy does not say how long they are kept.",
+   "p95_ms": 2400,
+   "partner": "Commly",
+   "privacy": 0,
+   "risk": "Missing retention terms",
+   "scopes": 1,
+   "status": "pending",
+   "submission_id": "S-502",
+   "submitted_on": "2026-11-03",
+   "type": "New"
+  },
+  {
+   "eval_pct": 84.0,
+   "evals": 0,
+   "injection": 0,
+   "latency": 1,
+   "listing_name": "Inbox Autopilot",
+   "manifest": 1,
+   "note": "Followed 3 of 40 planted instructions hidden in prospect replies. Eval pass rate below the 90% bar.",
+   "p95_ms": 3100,
+   "partner": "Sendwise",
+   "privacy": 1,
+   "risk": "Fails injection suite",
+   "scopes": 1,
+   "status": "pending",
+   "submission_id": "S-503",
+   "submitted_on": "2026-11-02",
+   "type": "New"
+  },
+  {
+   "eval_pct": 95.2,
+   "evals": 1,
+   "injection": 1,
+   "latency": 1,
+   "listing_name": "Readaroo v2.0",
+   "manifest": 1,
+   "note": "Passed the all-audience review; payment links out to the partner's checkout.",
+   "p95_ms": 1100,
+   "partner": "Readaroo",
+   "privacy": 1,
+   "risk": "Consumer listing",
+   "scopes": 1,
+   "status": "pending",
+   "submission_id": "S-504",
+   "submitted_on": "2026-11-04",
+   "type": "New"
+  },
+  {
+   "eval_pct": 93.5,
+   "evals": 1,
+   "injection": 1,
+   "latency": 0,
+   "listing_name": "Callsight Live Coach",
+   "manifest": 1,
+   "note": "Live hints take 7.9s at p95, past the 5s bar. Can list as post-call coaching only.",
+   "p95_ms": 7900,
+   "partner": "Callsight",
+   "privacy": 1,
+   "risk": "Slow p95",
+   "scopes": 1,
+   "status": "pending",
+   "submission_id": "S-505",
+   "submitted_on": "2026-11-04",
+   "type": "New"
+  }
+ ],
+ "supply_gaps": [
+  {
+   "query": "partner-sourced pipeline attribution",
+   "workspaces": 412
+  },
+  {
+   "query": "usage-based pricing quotes",
+   "workspaces": 288
+  },
+  {
+   "query": "demo environment setup for sales engineers",
+   "workspaces": 251
+  }
+ ],
+ "tool_policies": [
+  {
+   "enabled": 1,
+   "listing_id": "orbit",
+   "tool_name": "account_brief",
+   "workspace_id": "nw-freight"
+  },
+  {
+   "enabled": 1,
+   "listing_id": "orbit",
+   "tool_name": "buying_signals",
+   "workspace_id": "nw-freight"
+  },
+  {
+   "enabled": 1,
+   "listing_id": "orbit",
+   "tool_name": "draft_outreach",
+   "workspace_id": "nw-freight"
+  },
+  {
+   "enabled": 0,
+   "listing_id": "orbit",
+   "tool_name": "sync_to_crm",
+   "workspace_id": "nw-freight"
+  },
+  {
+   "enabled": 1,
+   "listing_id": "conviction",
+   "tool_name": "diligence_memo",
+   "workspace_id": "nw-capital"
+  },
+  {
+   "enabled": 1,
+   "listing_id": "conviction",
+   "tool_name": "portfolio_monitor",
+   "workspace_id": "nw-capital"
+  },
+  {
+   "enabled": 1,
+   "listing_id": "conviction",
+   "tool_name": "add_on_screen",
+   "workspace_id": "nw-capital"
+  },
+  {
+   "enabled": 1,
+   "listing_id": "conviction",
+   "tool_name": "export_to_deal_room",
+   "workspace_id": "nw-capital"
+  },
+  {
+   "enabled": 1,
+   "listing_id": "credits",
+   "tool_name": "simulate_migration",
+   "workspace_id": "nw-software"
+  },
+  {
+   "enabled": 1,
+   "listing_id": "credits",
+   "tool_name": "price_solver",
+   "workspace_id": "nw-software"
+  },
+  {
+   "enabled": 1,
+   "listing_id": "credits",
+   "tool_name": "segment_impact",
+   "workspace_id": "nw-software"
+  },
+  {
+   "enabled": 1,
+   "listing_id": "credits",
+   "tool_name": "publish_price_book",
+   "workspace_id": "nw-software"
+  },
+  {
+   "enabled": 1,
+   "listing_id": "readaroo",
+   "tool_name": "search_tonight",
+   "workspace_id": "personal-jordan"
+  },
+  {
+   "enabled": 1,
+   "listing_id": "readaroo",
+   "tool_name": "borrow_title",
+   "workspace_id": "personal-jordan"
+  },
+  {
+   "enabled": 1,
+   "listing_id": "readaroo",
+   "tool_name": "family_shelf",
+   "workspace_id": "personal-jordan"
+  },
+  {
+   "enabled": 1,
+   "listing_id": "readaroo",
+   "tool_name": "pay_fine",
+   "workspace_id": "personal-jordan"
+  }
+ ],
+ "tools": [
+  {
+   "access": "read",
+   "calls_per_run": 2,
+   "description": "One-page account summary with sources",
+   "listing_id": "orbit",
+   "tool_name": "account_brief"
+  },
+  {
+   "access": "read",
+   "calls_per_run": 2,
+   "description": "Hiring, funding and tech-stack changes",
+   "listing_id": "orbit",
+   "tool_name": "buying_signals"
+  },
+  {
+   "access": "read",
+   "calls_per_run": 1,
+   "description": "First-touch email in the rep's voice",
+   "listing_id": "orbit",
+   "tool_name": "draft_outreach"
+  },
+  {
+   "access": "write",
+   "calls_per_run": 1,
+   "description": "Logs the brief and next step on the account",
+   "listing_id": "orbit",
+   "tool_name": "sync_to_crm"
+  },
+  {
+   "access": "read",
+   "calls_per_run": 2,
+   "description": "VC: cited memo on market, traction, team and risks",
+   "listing_id": "conviction",
+   "tool_name": "diligence_memo"
+  },
+  {
+   "access": "read",
+   "calls_per_run": 2,
+   "description": "PE: flags portfolio companies off plan",
+   "listing_id": "conviction",
+   "tool_name": "portfolio_monitor"
+  },
+  {
+   "access": "read",
+   "calls_per_run": 2,
+   "description": "PE: ranks add-on targets for a platform company",
+   "listing_id": "conviction",
+   "tool_name": "add_on_screen"
+  },
+  {
+   "access": "write",
+   "calls_per_run": 1,
+   "description": "Saves the memo to the deal's folder",
+   "listing_id": "conviction",
+   "tool_name": "export_to_deal_room"
+  },
+  {
+   "access": "read",
+   "calls_per_run": 2,
+   "description": "Replays history under a credit price book",
+   "listing_id": "credits",
+   "tool_name": "simulate_migration"
+  },
+  {
+   "access": "read",
+   "calls_per_run": 2,
+   "description": "Finds the credit price for a revenue target",
+   "listing_id": "credits",
+   "tool_name": "price_solver"
+  },
+  {
+   "access": "read",
+   "calls_per_run": 1,
+   "description": "Who pays more or less, by segment",
+   "listing_id": "credits",
+   "tool_name": "segment_impact"
+  },
+  {
+   "access": "write",
+   "calls_per_run": 1,
+   "description": "Saves the new price book for finance review",
+   "listing_id": "credits",
+   "tool_name": "publish_price_book"
+  },
+  {
+   "access": "read",
+   "calls_per_run": 1,
+   "description": "Titles you can borrow now across all your cards",
+   "listing_id": "readaroo",
+   "tool_name": "search_tonight"
+  },
+  {
+   "access": "write",
+   "calls_per_run": 1,
+   "description": "Borrows from whichever card has it first",
+   "listing_id": "readaroo",
+   "tool_name": "borrow_title"
+  },
+  {
+   "access": "write",
+   "calls_per_run": 1,
+   "description": "Adds a title to a child's kid-safe shelf",
+   "listing_id": "readaroo",
+   "tool_name": "family_shelf"
+  },
+  {
+   "access": "link",
+   "calls_per_run": 0,
+   "description": "Opens Readaroo's own checkout",
+   "listing_id": "readaroo",
+   "tool_name": "pay_fine"
+  }
+ ],
+ "workspaces": [
+  {
+   "commitment_remaining_usd": 412800,
+   "kind": "company",
+   "name": "Northwind Freight",
+   "workspace_id": "nw-freight"
+  },
+  {
+   "commitment_remaining_usd": 250000,
+   "kind": "company",
+   "name": "Northwind Capital",
+   "workspace_id": "nw-capital"
+  },
+  {
+   "commitment_remaining_usd": 180000,
+   "kind": "company",
+   "name": "Northwind Software",
+   "workspace_id": "nw-software"
+  },
+  {
+   "commitment_remaining_usd": 0,
+   "kind": "personal",
+   "name": "Jordan's personal account",
+   "workspace_id": "personal-jordan"
+  }
+ ]
+}

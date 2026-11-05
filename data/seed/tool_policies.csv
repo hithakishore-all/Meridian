@@ -1,0 +1,17 @@
+workspace_id,listing_id,tool_name,enabled
+nw-freight,orbit,account_brief,1
+nw-freight,orbit,buying_signals,1
+nw-freight,orbit,draft_outreach,1
+nw-freight,orbit,sync_to_crm,0
+nw-capital,conviction,diligence_memo,1
+nw-capital,conviction,portfolio_monitor,1
+nw-capital,conviction,add_on_screen,1
+nw-capital,conviction,export_to_deal_room,1
+nw-software,credits,simulate_migration,1
+nw-software,credits,price_solver,1
+nw-software,credits,segment_impact,1
+nw-software,credits,publish_price_book,1
+personal-jordan,readaroo,search_tonight,1
+personal-jordan,readaroo,borrow_title,1
+personal-jordan,readaroo,family_shelf,1
+personal-jordan,readaroo,pay_fine,1

@@ -1,0 +1,31 @@
+# Slack app manifest for Meridian. Create the app from this file (docs/SETUP_SLACK.md, step 1).
+# Socket Mode: no public URL needed. The bot only posts where it is invited or mentioned.
+display_information:
+  name: Meridian
+  description: Runs marketplace agents under your workspace's policy. Demo with fictional data.
+  background_color: "#1b1530"
+features:
+  bot_user:
+    display_name: Meridian
+    always_online: false
+  slash_commands:
+    - command: /meridian
+      description: Run a marketplace agent, check approvals or usage
+      usage_hint: "help | listings | prompts orbit | run orbit-brief | approvals | usage nw-freight"
+      should_escape: false
+oauth_config:
+  scopes:
+    bot:
+      - commands
+      - chat:write
+      - chat:write.public
+      - app_mentions:read
+settings:
+  event_subscriptions:
+    bot_events:
+      - app_mention
+  interactivity:
+    is_enabled: true
+  org_deploy_enabled: false
+  socket_mode_enabled: true
+  token_rotation_enabled: false
