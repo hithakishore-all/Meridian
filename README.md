@@ -2,6 +2,8 @@
 
 **Every agent, governed and paid for in one place.**
 
+**[Try the clickable demo](https://hithakishore-all.github.io/meridian/)** · no install, synthetic data · part of [my AI product portfolio](https://hithakishore-all.github.io)
+
 Meridian is a B2B marketplace where companies discover, buy, govern and run third-party AI agents, and where the marketplace team proves those agents actually get used. Partners list one MCP-style tool server; buyers run it in a chat assistant, next to their data, or in Slack; every call passes one policy gateway that checks who is asking, what they may touch, and what it costs. This repo holds a working web console, policy gateway and Slack bot on Snowflake, plus an offline mode that needs no accounts.
 
 ![Run an agent: the validator rejects an uncited claim, a stale source is flagged, and a write waits for its owner](docs/screenshots/04-run-conviction-validator-and-approval.png)
