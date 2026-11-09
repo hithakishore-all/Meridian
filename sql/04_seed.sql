@@ -15,6 +15,7 @@ INSERT INTO MERIDIAN.CORE.LISTINGS (LISTING_ID, NAME, PUBLISHER, CATEGORY, FEATU
   ('conviction', 'Conviction AI', 'Conviction Labs', 'Investing', 1, 0, 612, 66, 94.8, 3600, 'Type II', NULL, NULL, 'Per seat, annual', 'Investment intelligence for VC and PE firms: cited diligence memos, portfolio monitoring and add-on screening.', 'investment intelligence diligence memo venture private equity vc pe portfolio add-on'),
   ('credits', 'Credit Simulator', 'Credit Simulator', 'Pricing', 1, 0, 214, 79, 97.1, 4200, 'Type II', NULL, NULL, 'Annual, per workspace', 'Simulates moving a seat-based plan to credits using billing and usage history.', 'pricing credits usage based seat migration simulation monetization billing'),
   ('readaroo', 'Readaroo', 'Readaroo', 'Consumer', 1, 1, 48200, 58, 95.2, 1100, 'Type II', NULL, NULL, 'Free; fines paid to libraries', 'An online library: one shelf across library cards, read-tonight search, kid-safe family shelves.', 'library books ebook audiobook borrow reading kids family'),
+  ('fieldwise', 'Fieldwise', 'Fieldwise', 'Field service', 1, 0, 386, 74, 96.0, 1400, 'Type II', NULL, NULL, 'Per technician, annual', 'Guided field-service resolution: confirms the exact model before any step, cites the manual page, and hands a reviewer-approved procedure to the technician''s phone.', 'field service repair fault code technician service desk elevator equipment first-time fix manual procedure troubleshooting dispatch'),
   ('purlwise', 'Purlwise', 'Purlwise', 'Hobbies', 0, 1, 31800, 63, 93.0, 900, 'Type II', NULL, NULL, 'Free with paid patterns', 'Knit and crochet patterns searchable by the yarn you own, resized to your gauge, with a row counter.', 'knit knitting crochet pattern yarn gauge row counter craft'),
   ('washbloom', 'Wash & Bloom', 'Wash & Bloom', 'Hobbies', 0, 1, 9700, 47, 91.5, 1300, 'Type II', NULL, NULL, 'Free', 'Daily watercolor prompts, mixing recipes from your paints, and feedback on a photo of your piece.', 'watercolor painting palette mixing art'),
   ('callsight', 'Callsight', 'Callsight', 'Conversation intelligence', 0, 0, 2940, 74, 95.5, 2100, 'Type II', NULL, NULL, 'Per seat', 'Summarizes sales calls, flags competitor and risk language, suggests one coaching moment per call.', 'conversation intelligence call summary coaching competitor objection'),
@@ -45,6 +46,10 @@ INSERT INTO MERIDIAN.CORE.TOOLS (LISTING_ID, TOOL_NAME, ACCESS, DESCRIPTION, CAL
   ('credits', 'price_solver', 'read', 'Finds the credit price for a revenue target', 2),
   ('credits', 'segment_impact', 'read', 'Who pays more or less, by segment', 1),
   ('credits', 'publish_price_book', 'write', 'Saves the new price book for finance review', 1),
+  ('fieldwise', 'identify_unit', 'read', 'Checks the case and asks for model and revision before any steps', 1),
+  ('fieldwise', 'cited_guidance', 'read', 'Model-specific guidance cited to a manual revision and page', 2),
+  ('fieldwise', 'past_fixes', 'read', 'Past cases for the same fault and model, with a denominator', 1),
+  ('fieldwise', 'start_procedure', 'write', 'Hands an approved, version-pinned procedure to the assigned technician', 1),
   ('readaroo', 'search_tonight', 'read', 'Titles you can borrow now across all your cards', 1),
   ('readaroo', 'borrow_title', 'write', 'Borrows from whichever card has it first', 1),
   ('readaroo', 'family_shelf', 'write', 'Adds a title to a child''s kid-safe shelf', 1),
@@ -55,6 +60,7 @@ INSERT INTO MERIDIAN.CORE.WORKSPACES (WORKSPACE_ID, NAME, KIND, COMMITMENT_REMAI
   ('nw-freight', 'Northwind Freight', 'company', 412800),
   ('nw-capital', 'Northwind Capital', 'company', 250000),
   ('nw-software', 'Northwind Software', 'company', 180000),
+  ('nw-service', 'Northwind Field Service', 'company', 120000),
   ('personal-jordan', 'Jordan''s personal account', 'personal', 0);
 
 DELETE FROM MERIDIAN.CORE.MEMBERS;
@@ -67,6 +73,9 @@ INSERT INTO MERIDIAN.CORE.MEMBERS (USER_ID, WORKSPACE_ID, DISPLAY_NAME, EMAIL, G
   ('noor', 'nw-capital', 'Noor Haddad', 'noor.haddad@northwind-capital.example', 'IT', 1),
   ('sam', 'nw-software', 'Sam Ortiz', 'sam.ortiz@northwind-software.example', 'Pricing', 0),
   ('kai', 'nw-software', 'Kai Brennan', 'kai.brennan@northwind-software.example', 'IT', 1),
+  ('ana', 'nw-service', 'Ana Torres', 'ana.torres@northwind-service.example', 'Service desk', 0),
+  ('teo', 'nw-service', 'Teo Varga', 'teo.varga@northwind-service.example', 'Field technicians', 0),
+  ('omar', 'nw-service', 'Omar Diaz', 'omar.diaz@northwind-service.example', 'IT', 1),
   ('jordan', 'personal-jordan', 'Jordan Lee', 'jordan@home.example', 'Owner', 1);
 
 DELETE FROM MERIDIAN.CORE.INSTALLS;
@@ -74,6 +83,7 @@ INSERT INTO MERIDIAN.CORE.INSTALLS (WORKSPACE_ID, LISTING_ID, STATUS, PLAN, PAY_
   ('nw-freight', 'orbit', 'not_purchased', NULL, NULL, 2000, 1, 1, 1, NULL, NULL),
   ('nw-capital', 'conviction', 'approved', 'annual', 'commitment', 3000, 1, 1, 3, 'noor', '2026-10-12'),
   ('nw-software', 'credits', 'approved', 'annual', 'invoice', 1500, 1, 1, 2, 'kai', '2026-09-02'),
+  ('nw-service', 'fieldwise', 'approved', 'annual', 'commitment', 1000, 1, 1, 1, 'omar', '2026-11-06'),
   ('personal-jordan', 'readaroo', 'approved', 'free', 'none', 0, 1, 0, 1, 'jordan', '2026-10-20');
 
 DELETE FROM MERIDIAN.CORE.GROUP_POLICIES;
@@ -84,6 +94,8 @@ INSERT INTO MERIDIAN.CORE.GROUP_POLICIES (WORKSPACE_ID, LISTING_ID, GROUP_NAME, 
   ('nw-freight', 'orbit', 'Marketing', 0),
   ('nw-capital', 'conviction', 'Deal team', 1),
   ('nw-software', 'credits', 'Pricing', 1),
+  ('nw-service', 'fieldwise', 'Service desk', 1),
+  ('nw-service', 'fieldwise', 'Field technicians', 1),
   ('personal-jordan', 'readaroo', 'Owner', 1);
 
 DELETE FROM MERIDIAN.CORE.TOOL_POLICIES;
@@ -100,6 +112,10 @@ INSERT INTO MERIDIAN.CORE.TOOL_POLICIES (WORKSPACE_ID, LISTING_ID, TOOL_NAME, EN
   ('nw-software', 'credits', 'price_solver', 1),
   ('nw-software', 'credits', 'segment_impact', 1),
   ('nw-software', 'credits', 'publish_price_book', 1),
+  ('nw-service', 'fieldwise', 'identify_unit', 1),
+  ('nw-service', 'fieldwise', 'cited_guidance', 1),
+  ('nw-service', 'fieldwise', 'past_fixes', 1),
+  ('nw-service', 'fieldwise', 'start_procedure', 1),
   ('personal-jordan', 'readaroo', 'search_tonight', 1),
   ('personal-jordan', 'readaroo', 'borrow_title', 1),
   ('personal-jordan', 'readaroo', 'family_shelf', 1),
@@ -116,6 +132,9 @@ INSERT INTO MERIDIAN.CORE.PROMPTS (PROMPT_ID, LISTING_ID, TOOL_NAME, TEXT) VALUE
   ('credits-sim', 'credits', 'simulate_migration', 'Simulate moving our Pro plan from seats to credits at $0.10'),
   ('credits-solve', 'credits', 'price_solver', 'What credit price keeps revenue flat?'),
   ('credits-publish', 'credits', 'publish_price_book', 'Publish this price book for finance review'),
+  ('fieldwise-d17', 'fieldwise', 'identify_unit', 'Case C104: doors keep reopening, code D17. What should the technician do?'),
+  ('fieldwise-guide', 'fieldwise', 'cited_guidance', 'Model B, revision 2 is confirmed. What are the approved steps?'),
+  ('fieldwise-handoff', 'fieldwise', 'start_procedure', 'Hand the approved procedure to Teo for case C104'),
   ('readaroo-find', 'readaroo', 'search_tonight', 'What can I read tonight on supply chains?'),
   ('readaroo-borrow', 'readaroo', 'borrow_title', 'Borrow The Long Haul Ledger'),
   ('readaroo-kids', 'readaroo', 'family_shelf', 'Add a dinosaur picture book to Maya''s shelf'),
@@ -146,6 +165,14 @@ INSERT INTO MERIDIAN.CORE.FACTS (EVIDENCE_ID, PROMPT_ID, CLAIM, SOURCE, AS_OF, K
   ('EV-CREDITS-SOLVE-02', 'credits-solve', 'Light users (under 20 seats) save 9% on average; heavy AI users pay 18% more.', 'Simulation run S-114; ACCOUNTS.PLANS', '2026-11-04', 'fact', NULL),
   ('EV-CREDITS-SOLVE-03', 'credits-solve', '41 accounts would see increases over $5k a year.', 'Simulation run S-114', '2026-11-04', 'fact', NULL),
   ('EV-CREDITS-PUBLISH-01', 'credits-publish', 'Saved price book ''Pro credits v1 ($0.104)'' for finance review. Nothing changes for customers until finance approves.', 'PRICING.PRICE_BOOKS PB-21', '2026-11-04', 'action', NULL),
+  ('EV-FIELDWISE-D17-01', 'fieldwise-d17', 'Case C104 at Harbor Tower, car 2: the caller reported ''doors keep reopening, D17''. Serial SN-48213 is on file.', 'CASES C104; ASSETS B002', '2026-11-04', 'fact', NULL),
+  ('EV-FIELDWISE-D17-02', 'fieldwise-d17', 'Model and revision are unknown. Two models share code D17 and need different fixes, so no repair steps are given until a person confirms them.', NULL, NULL, 'unknown', NULL),
+  ('EV-FIELDWISE-GUIDE-01', 'fieldwise-guide', 'Step 1: read indicator B in the simulator and record green, amber or unreadable.', 'Model B service manual MB2, rev 2, p.14', '2026-09-18', 'fact', NULL),
+  ('EV-FIELDWISE-GUIDE-02', 'fieldwise-guide', 'Step 2: run the B simulator self-test and record its result.', 'Model B service manual MB2, rev 2, p.15', '2026-09-18', 'fact', NULL),
+  ('EV-FIELDWISE-GUIDE-03', 'fieldwise-guide', 'Past D17 cases on Model B rev 2: 1 of 2 ended in a verified recovery; the other was not verified.', 'CASE_HISTORY H1, H2', '2026-10-30', 'fact', NULL),
+  ('EV-FIELDWISE-GUIDE-04', 'fieldwise-guide', 'Approved procedure: ''Indicator, self-test, verify'', published by a reviewer and pinned to Model B rev 2.', 'PROCEDURES T-IND v1', '2026-10-02', 'fact', NULL),
+  ('EV-FIELDWISE-GUIDE-05', 'fieldwise-guide', 'This fix works every time on D17.', NULL, NULL, 'uncited', NULL),
+  ('EV-FIELDWISE-HANDOFF-01', 'fieldwise-handoff', 'Assigned ''Indicator, self-test, verify'' (v1, pinned) to Teo for case C104. He can resume it on his phone.', 'FIELDWISE.RUNS R-C104', '2026-11-04', 'action', NULL),
   ('EV-READAROO-FIND-01', 'readaroo-find', 'The Long Haul Ledger (ebook): available now on your Riverside card.', 'Riverside Public Library catalog', '2026-11-04', 'fact', NULL),
   ('EV-READAROO-FIND-02', 'readaroo-find', 'Cold Chain Stories (audiobook): available now on your County card.', 'County Library catalog', '2026-11-04', 'fact', NULL),
   ('EV-READAROO-BORROW-01', 'readaroo-borrow', 'Borrowed The Long Haul Ledger. Due Nov 25, 2026.', 'Riverside Public Library loan L-88213', '2026-11-04', 'action', NULL),
@@ -158,6 +185,7 @@ INSERT INTO MERIDIAN.CORE.SUBMISSIONS (SUBMISSION_ID, PARTNER, LISTING_NAME, TYP
   ('S-502', 'Commly', 'Comp Clarity', 'New', '2026-11-03', 1, 1, 0, 1, 1, 1, 92.1, 2400, 'Missing retention terms', 'Reads rep commission statements; privacy policy does not say how long they are kept.', 'pending'),
   ('S-503', 'Sendwise', 'Inbox Autopilot', 'New', '2026-11-02', 1, 1, 1, 0, 1, 0, 84.0, 3100, 'Fails injection suite', 'Followed 3 of 40 planted instructions hidden in prospect replies. Eval pass rate below the 90% bar.', 'pending'),
   ('S-504', 'Readaroo', 'Readaroo v2.0', 'New', '2026-11-04', 1, 1, 1, 1, 1, 1, 95.2, 1100, 'Consumer listing', 'Passed the all-audience review; payment links out to the partner''s checkout.', 'pending'),
+  ('S-506', 'Fieldwise', 'Fieldwise v1.0', 'New', '2026-11-04', 1, 1, 1, 1, 1, 1, 96.0, 1400, 'Writes to a service system', 'start_procedure assigns work to a technician, so it ships off by default and needs a named approver per run.', 'pending'),
   ('S-505', 'Callsight', 'Callsight Live Coach', 'New', '2026-11-04', 1, 1, 1, 1, 0, 1, 93.5, 7900, 'Slow p95', 'Live hints take 7.9s at p95, past the 5s bar. Can list as post-call coaching only.', 'pending');
 
 DELETE FROM MERIDIAN.CORE.BOOKINGS_WEEKLY;

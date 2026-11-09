@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.1.0 (2026-11-09)
+
+- New featured listing: Fieldwise (guided field-service resolution) at Northwind Field Service. It asks for the model before any steps, cites manual pages, rejects an uncited "works every time" claim, and its technician handoff waits for the person who asked.
+- Fieldwise v1.0 added to the review queue.
+- Smoke test covers the Fieldwise flow.
+- Captioned walkthrough video of the clickable demo, with a recorder (`make video`) to re-make it.
+
 ## 1.0.0 (2026-11-04)
 
 First release.

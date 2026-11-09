@@ -13,7 +13,7 @@ const HELP = [
   '• `/meridian run orbit-brief` runs a prompt (add `data` or `chat` to pick a surface; default is `slack`)',
   '• `/meridian approvals` shows writes waiting for you',
   '• `/meridian usage nw-freight` shows spend for a workspace',
-  'Try the demo order: `run orbit-brief` (works after IT deploys Orbit in the web console), `run conviction-memo`, `run credits-solve`, `run conviction-export`.',
+  'Try the demo order: `run orbit-brief` (works after IT deploys Orbit in the web console), `run conviction-memo`, `run credits-solve`, `run fieldwise-guide`, `run conviction-export`.',
 ].join('\n');
 
 export function formatRun(r) {

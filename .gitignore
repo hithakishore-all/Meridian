@@ -12,3 +12,6 @@ npm-debug.log*
 .DS_Store
 *.zip
 __pycache__/
+
+# walkthrough recordings
+.walkthrough/

@@ -11,6 +11,10 @@ nw-software,credits,simulate_migration,1
 nw-software,credits,price_solver,1
 nw-software,credits,segment_impact,1
 nw-software,credits,publish_price_book,1
+nw-service,fieldwise,identify_unit,1
+nw-service,fieldwise,cited_guidance,1
+nw-service,fieldwise,past_fixes,1
+nw-service,fieldwise,start_procedure,1
 personal-jordan,readaroo,search_tonight,1
 personal-jordan,readaroo,borrow_title,1
 personal-jordan,readaroo,family_shelf,1

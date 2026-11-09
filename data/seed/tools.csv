@@ -11,6 +11,10 @@ credits,simulate_migration,read,Replays history under a credit price book,2
 credits,price_solver,read,Finds the credit price for a revenue target,2
 credits,segment_impact,read,"Who pays more or less, by segment",1
 credits,publish_price_book,write,Saves the new price book for finance review,1
+fieldwise,identify_unit,read,Checks the case and asks for model and revision before any steps,1
+fieldwise,cited_guidance,read,Model-specific guidance cited to a manual revision and page,2
+fieldwise,past_fixes,read,"Past cases for the same fault and model, with a denominator",1
+fieldwise,start_procedure,write,"Hands an approved, version-pinned procedure to the assigned technician",1
 readaroo,search_tonight,read,Titles you can borrow now across all your cards,1
 readaroo,borrow_title,write,Borrows from whichever card has it first,1
 readaroo,family_shelf,write,Adds a title to a child's kid-safe shelf,1

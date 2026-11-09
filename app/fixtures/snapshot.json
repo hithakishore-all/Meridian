@@ -289,6 +289,78 @@
   },
   {
    "as_of": "2026-11-04",
+   "claim": "Case C104 at Harbor Tower, car 2: the caller reported 'doors keep reopening, D17'. Serial SN-48213 is on file.",
+   "evidence_id": "EV-FIELDWISE-D17-01",
+   "kind": "fact",
+   "prompt_id": "fieldwise-d17",
+   "source": "CASES C104; ASSETS B002",
+   "source_listing": ""
+  },
+  {
+   "as_of": "",
+   "claim": "Model and revision are unknown. Two models share code D17 and need different fixes, so no repair steps are given until a person confirms them.",
+   "evidence_id": "EV-FIELDWISE-D17-02",
+   "kind": "unknown",
+   "prompt_id": "fieldwise-d17",
+   "source": "",
+   "source_listing": ""
+  },
+  {
+   "as_of": "2026-09-18",
+   "claim": "Step 1: read indicator B in the simulator and record green, amber or unreadable.",
+   "evidence_id": "EV-FIELDWISE-GUIDE-01",
+   "kind": "fact",
+   "prompt_id": "fieldwise-guide",
+   "source": "Model B service manual MB2, rev 2, p.14",
+   "source_listing": ""
+  },
+  {
+   "as_of": "2026-09-18",
+   "claim": "Step 2: run the B simulator self-test and record its result.",
+   "evidence_id": "EV-FIELDWISE-GUIDE-02",
+   "kind": "fact",
+   "prompt_id": "fieldwise-guide",
+   "source": "Model B service manual MB2, rev 2, p.15",
+   "source_listing": ""
+  },
+  {
+   "as_of": "2026-10-30",
+   "claim": "Past D17 cases on Model B rev 2: 1 of 2 ended in a verified recovery; the other was not verified.",
+   "evidence_id": "EV-FIELDWISE-GUIDE-03",
+   "kind": "fact",
+   "prompt_id": "fieldwise-guide",
+   "source": "CASE_HISTORY H1, H2",
+   "source_listing": ""
+  },
+  {
+   "as_of": "2026-10-02",
+   "claim": "Approved procedure: 'Indicator, self-test, verify', published by a reviewer and pinned to Model B rev 2.",
+   "evidence_id": "EV-FIELDWISE-GUIDE-04",
+   "kind": "fact",
+   "prompt_id": "fieldwise-guide",
+   "source": "PROCEDURES T-IND v1",
+   "source_listing": ""
+  },
+  {
+   "as_of": "",
+   "claim": "This fix works every time on D17.",
+   "evidence_id": "EV-FIELDWISE-GUIDE-05",
+   "kind": "uncited",
+   "prompt_id": "fieldwise-guide",
+   "source": "",
+   "source_listing": ""
+  },
+  {
+   "as_of": "2026-11-04",
+   "claim": "Assigned 'Indicator, self-test, verify' (v1, pinned) to Teo for case C104. He can resume it on his phone.",
+   "evidence_id": "EV-FIELDWISE-HANDOFF-01",
+   "kind": "action",
+   "prompt_id": "fieldwise-handoff",
+   "source": "FIELDWISE.RUNS R-C104",
+   "source_listing": ""
+  },
+  {
+   "as_of": "2026-11-04",
    "claim": "The Long Haul Ledger (ebook): available now on your Riverside card.",
    "evidence_id": "EV-READAROO-FIND-01",
    "kind": "fact",
@@ -399,6 +471,18 @@
   },
   {
    "enabled": 1,
+   "group_name": "Service desk",
+   "listing_id": "fieldwise",
+   "workspace_id": "nw-service"
+  },
+  {
+   "enabled": 1,
+   "group_name": "Field technicians",
+   "listing_id": "fieldwise",
+   "workspace_id": "nw-service"
+  },
+  {
+   "enabled": 1,
    "group_name": "Owner",
    "listing_id": "readaroo",
    "workspace_id": "personal-jordan"
@@ -443,6 +527,19 @@
    "spend_cap_usd": 1500,
    "status": "approved",
    "workspace_id": "nw-software"
+  },
+  {
+   "approved_by": "omar",
+   "approved_on": "2026-11-06",
+   "human_write": 1,
+   "listing_id": "fieldwise",
+   "pay_via": "commitment",
+   "pii_mask": 1,
+   "plan": "annual",
+   "policy_version": 1,
+   "spend_cap_usd": 1000,
+   "status": "approved",
+   "workspace_id": "nw-service"
   },
   {
    "approved_by": "jordan",
@@ -530,6 +627,24 @@
    "publisher": "Readaroo",
    "soc2": "Type II",
    "weekly_active_pct": 58
+  },
+  {
+   "category": "Field service",
+   "consumer": 0,
+   "data_refreshed_on": "",
+   "description": "Guided field-service resolution: confirms the exact model before any step, cites the manual page, and hands a reviewer-approved procedure to the technician's phone.",
+   "eval_pct": 96.0,
+   "featured": 1,
+   "freshness_rule_days": "",
+   "installs": 386,
+   "keywords": "field service repair fault code technician service desk elevator equipment first-time fix manual procedure troubleshooting dispatch",
+   "listing_id": "fieldwise",
+   "name": "Fieldwise",
+   "p95_ms": 1400,
+   "price_model": "Per technician, annual",
+   "publisher": "Fieldwise",
+   "soc2": "Type II",
+   "weekly_active_pct": 74
   },
   {
    "category": "Hobbies",
@@ -868,6 +983,30 @@
    "workspace_id": "nw-software"
   },
   {
+   "display_name": "Ana Torres",
+   "email": "ana.torres@northwind-service.example",
+   "group_name": "Service desk",
+   "is_admin": 0,
+   "user_id": "ana",
+   "workspace_id": "nw-service"
+  },
+  {
+   "display_name": "Teo Varga",
+   "email": "teo.varga@northwind-service.example",
+   "group_name": "Field technicians",
+   "is_admin": 0,
+   "user_id": "teo",
+   "workspace_id": "nw-service"
+  },
+  {
+   "display_name": "Omar Diaz",
+   "email": "omar.diaz@northwind-service.example",
+   "group_name": "IT",
+   "is_admin": 1,
+   "user_id": "omar",
+   "workspace_id": "nw-service"
+  },
+  {
    "display_name": "Jordan Lee",
    "email": "jordan@home.example",
    "group_name": "Owner",
@@ -930,6 +1069,24 @@
    "prompt_id": "credits-publish",
    "text": "Publish this price book for finance review",
    "tool_name": "publish_price_book"
+  },
+  {
+   "listing_id": "fieldwise",
+   "prompt_id": "fieldwise-d17",
+   "text": "Case C104: doors keep reopening, code D17. What should the technician do?",
+   "tool_name": "identify_unit"
+  },
+  {
+   "listing_id": "fieldwise",
+   "prompt_id": "fieldwise-guide",
+   "text": "Model B, revision 2 is confirmed. What are the approved steps?",
+   "tool_name": "cited_guidance"
+  },
+  {
+   "listing_id": "fieldwise",
+   "prompt_id": "fieldwise-handoff",
+   "text": "Hand the approved procedure to Teo for case C104",
+   "tool_name": "start_procedure"
   },
   {
    "listing_id": "readaroo",
@@ -1026,6 +1183,24 @@
    "scopes": 1,
    "status": "pending",
    "submission_id": "S-504",
+   "submitted_on": "2026-11-04",
+   "type": "New"
+  },
+  {
+   "eval_pct": 96.0,
+   "evals": 1,
+   "injection": 1,
+   "latency": 1,
+   "listing_name": "Fieldwise v1.0",
+   "manifest": 1,
+   "note": "start_procedure assigns work to a technician, so it ships off by default and needs a named approver per run.",
+   "p95_ms": 1400,
+   "partner": "Fieldwise",
+   "privacy": 1,
+   "risk": "Writes to a service system",
+   "scopes": 1,
+   "status": "pending",
+   "submission_id": "S-506",
    "submitted_on": "2026-11-04",
    "type": "New"
   },
@@ -1134,6 +1309,30 @@
    "listing_id": "credits",
    "tool_name": "publish_price_book",
    "workspace_id": "nw-software"
+  },
+  {
+   "enabled": 1,
+   "listing_id": "fieldwise",
+   "tool_name": "identify_unit",
+   "workspace_id": "nw-service"
+  },
+  {
+   "enabled": 1,
+   "listing_id": "fieldwise",
+   "tool_name": "cited_guidance",
+   "workspace_id": "nw-service"
+  },
+  {
+   "enabled": 1,
+   "listing_id": "fieldwise",
+   "tool_name": "past_fixes",
+   "workspace_id": "nw-service"
+  },
+  {
+   "enabled": 1,
+   "listing_id": "fieldwise",
+   "tool_name": "start_procedure",
+   "workspace_id": "nw-service"
   },
   {
    "enabled": 1,
@@ -1248,6 +1447,34 @@
   {
    "access": "read",
    "calls_per_run": 1,
+   "description": "Checks the case and asks for model and revision before any steps",
+   "listing_id": "fieldwise",
+   "tool_name": "identify_unit"
+  },
+  {
+   "access": "read",
+   "calls_per_run": 2,
+   "description": "Model-specific guidance cited to a manual revision and page",
+   "listing_id": "fieldwise",
+   "tool_name": "cited_guidance"
+  },
+  {
+   "access": "read",
+   "calls_per_run": 1,
+   "description": "Past cases for the same fault and model, with a denominator",
+   "listing_id": "fieldwise",
+   "tool_name": "past_fixes"
+  },
+  {
+   "access": "write",
+   "calls_per_run": 1,
+   "description": "Hands an approved, version-pinned procedure to the assigned technician",
+   "listing_id": "fieldwise",
+   "tool_name": "start_procedure"
+  },
+  {
+   "access": "read",
+   "calls_per_run": 1,
    "description": "Titles you can borrow now across all your cards",
    "listing_id": "readaroo",
    "tool_name": "search_tonight"
@@ -1292,6 +1519,12 @@
    "kind": "company",
    "name": "Northwind Software",
    "workspace_id": "nw-software"
+  },
+  {
+   "commitment_remaining_usd": 120000,
+   "kind": "company",
+   "name": "Northwind Field Service",
+   "workspace_id": "nw-service"
   },
   {
    "commitment_remaining_usd": 0,

@@ -41,6 +41,9 @@ LISTINGS = [
      "Simulates moving a seat-based plan to credits using billing and usage history.", "pricing credits usage based seat migration simulation monetization billing"),
     ("readaroo", "Readaroo", "Readaroo", "Consumer", 1, 1, 48200, 58, 95.2, 1100, "Type II", None, None, "Free; fines paid to libraries",
      "An online library: one shelf across library cards, read-tonight search, kid-safe family shelves.", "library books ebook audiobook borrow reading kids family"),
+    ("fieldwise", "Fieldwise", "Fieldwise", "Field service", 1, 0, 386, 74, 96.0, 1400, "Type II", None, None, "Per technician, annual",
+     "Guided field-service resolution: confirms the exact model before any step, cites the manual page, and hands a reviewer-approved procedure to the technician's phone.",
+     "field service repair fault code technician service desk elevator equipment first-time fix manual procedure troubleshooting dispatch"),
     ("purlwise", "Purlwise", "Purlwise", "Hobbies", 0, 1, 31800, 63, 93.0, 900, "Type II", None, None, "Free with paid patterns",
      "Knit and crochet patterns searchable by the yarn you own, resized to your gauge, with a row counter.", "knit knitting crochet pattern yarn gauge row counter craft"),
     ("washbloom", "Wash & Bloom", "Wash & Bloom", "Hobbies", 0, 1, 9700, 47, 91.5, 1300, "Type II", None, None, "Free",
@@ -95,6 +98,10 @@ TOOLS = [
     ("credits", "price_solver", "read", "Finds the credit price for a revenue target", 2),
     ("credits", "segment_impact", "read", "Who pays more or less, by segment", 1),
     ("credits", "publish_price_book", "write", "Saves the new price book for finance review", 1),
+    ("fieldwise", "identify_unit", "read", "Checks the case and asks for model and revision before any steps", 1),
+    ("fieldwise", "cited_guidance", "read", "Model-specific guidance cited to a manual revision and page", 2),
+    ("fieldwise", "past_fixes", "read", "Past cases for the same fault and model, with a denominator", 1),
+    ("fieldwise", "start_procedure", "write", "Hands an approved, version-pinned procedure to the assigned technician", 1),
     ("readaroo", "search_tonight", "read", "Titles you can borrow now across all your cards", 1),
     ("readaroo", "borrow_title", "write", "Borrows from whichever card has it first", 1),
     ("readaroo", "family_shelf", "write", "Adds a title to a child's kid-safe shelf", 1),
@@ -107,6 +114,7 @@ workspaces = [
     {"workspace_id": "nw-freight", "name": "Northwind Freight", "kind": "company", "commitment_remaining_usd": 412800},
     {"workspace_id": "nw-capital", "name": "Northwind Capital", "kind": "company", "commitment_remaining_usd": 250000},
     {"workspace_id": "nw-software", "name": "Northwind Software", "kind": "company", "commitment_remaining_usd": 180000},
+    {"workspace_id": "nw-service", "name": "Northwind Field Service", "kind": "company", "commitment_remaining_usd": 120000},
     {"workspace_id": "personal-jordan", "name": "Jordan's personal account", "kind": "personal", "commitment_remaining_usd": 0},
 ]
 members = [
@@ -118,6 +126,9 @@ members = [
     {"user_id": "noor", "workspace_id": "nw-capital", "display_name": "Noor Haddad", "email": "noor.haddad@northwind-capital.example", "group_name": "IT", "is_admin": 1},
     {"user_id": "sam", "workspace_id": "nw-software", "display_name": "Sam Ortiz", "email": "sam.ortiz@northwind-software.example", "group_name": "Pricing", "is_admin": 0},
     {"user_id": "kai", "workspace_id": "nw-software", "display_name": "Kai Brennan", "email": "kai.brennan@northwind-software.example", "group_name": "IT", "is_admin": 1},
+    {"user_id": "ana", "workspace_id": "nw-service", "display_name": "Ana Torres", "email": "ana.torres@northwind-service.example", "group_name": "Service desk", "is_admin": 0},
+    {"user_id": "teo", "workspace_id": "nw-service", "display_name": "Teo Varga", "email": "teo.varga@northwind-service.example", "group_name": "Field technicians", "is_admin": 0},
+    {"user_id": "omar", "workspace_id": "nw-service", "display_name": "Omar Diaz", "email": "omar.diaz@northwind-service.example", "group_name": "IT", "is_admin": 1},
     {"user_id": "jordan", "workspace_id": "personal-jordan", "display_name": "Jordan Lee", "email": "jordan@home.example", "group_name": "Owner", "is_admin": 1},
 ]
 
@@ -126,6 +137,7 @@ installs = [
     {"workspace_id": "nw-freight", "listing_id": "orbit", "status": "not_purchased", "plan": "", "pay_via": "", "spend_cap_usd": 2000, "human_write": 1, "pii_mask": 1, "policy_version": 1, "approved_by": "", "approved_on": ""},
     {"workspace_id": "nw-capital", "listing_id": "conviction", "status": "approved", "plan": "annual", "pay_via": "commitment", "spend_cap_usd": 3000, "human_write": 1, "pii_mask": 1, "policy_version": 3, "approved_by": "noor", "approved_on": "2026-10-12"},
     {"workspace_id": "nw-software", "listing_id": "credits", "status": "approved", "plan": "annual", "pay_via": "invoice", "spend_cap_usd": 1500, "human_write": 1, "pii_mask": 1, "policy_version": 2, "approved_by": "kai", "approved_on": "2026-09-02"},
+    {"workspace_id": "nw-service", "listing_id": "fieldwise", "status": "approved", "plan": "annual", "pay_via": "commitment", "spend_cap_usd": 1000, "human_write": 1, "pii_mask": 1, "policy_version": 1, "approved_by": "omar", "approved_on": "2026-11-06"},
     {"workspace_id": "personal-jordan", "listing_id": "readaroo", "status": "approved", "plan": "free", "pay_via": "none", "spend_cap_usd": 0, "human_write": 1, "pii_mask": 0, "policy_version": 1, "approved_by": "jordan", "approved_on": "2026-10-20"},
 ]
 group_policies = [
@@ -134,6 +146,8 @@ group_policies = [
 ] + [
     {"workspace_id": "nw-capital", "listing_id": "conviction", "group_name": "Deal team", "enabled": 1},
     {"workspace_id": "nw-software", "listing_id": "credits", "group_name": "Pricing", "enabled": 1},
+    {"workspace_id": "nw-service", "listing_id": "fieldwise", "group_name": "Service desk", "enabled": 1},
+    {"workspace_id": "nw-service", "listing_id": "fieldwise", "group_name": "Field technicians", "enabled": 1},
     {"workspace_id": "personal-jordan", "listing_id": "readaroo", "group_name": "Owner", "enabled": 1},
 ]
 tool_policies = []
@@ -154,6 +168,9 @@ PROMPTS = [
     ("credits-sim", "credits", "simulate_migration", "Simulate moving our Pro plan from seats to credits at $0.10"),
     ("credits-solve", "credits", "price_solver", "What credit price keeps revenue flat?"),
     ("credits-publish", "credits", "publish_price_book", "Publish this price book for finance review"),
+    ("fieldwise-d17", "fieldwise", "identify_unit", "Case C104: doors keep reopening, code D17. What should the technician do?"),
+    ("fieldwise-guide", "fieldwise", "cited_guidance", "Model B, revision 2 is confirmed. What are the approved steps?"),
+    ("fieldwise-handoff", "fieldwise", "start_procedure", "Hand the approved procedure to Teo for case C104"),
     ("readaroo-find", "readaroo", "search_tonight", "What can I read tonight on supply chains?"),
     ("readaroo-borrow", "readaroo", "borrow_title", "Borrow The Long Haul Ledger"),
     ("readaroo-kids", "readaroo", "family_shelf", "Add a dinosaur picture book to Maya's shelf"),
@@ -198,6 +215,15 @@ fact("credits-solve", "Light users (under 20 seats) save 9% on average; heavy AI
 fact("credits-solve", "41 accounts would see increases over $5k a year.", "Simulation run S-114", DEMO_TODAY.isoformat())
 fact("credits-publish", "Saved price book 'Pro credits v1 ($0.104)' for finance review. Nothing changes for customers until finance approves.", "PRICING.PRICE_BOOKS PB-21", DEMO_TODAY.isoformat(), kind="action")
 
+fact("fieldwise-d17", "Case C104 at Harbor Tower, car 2: the caller reported 'doors keep reopening, D17'. Serial SN-48213 is on file.", "CASES C104; ASSETS B002", DEMO_TODAY.isoformat())
+fact("fieldwise-d17", "Model and revision are unknown. Two models share code D17 and need different fixes, so no repair steps are given until a person confirms them.", kind="unknown")
+fact("fieldwise-guide", "Step 1: read indicator B in the simulator and record green, amber or unreadable.", "Model B service manual MB2, rev 2, p.14", "2026-09-18")
+fact("fieldwise-guide", "Step 2: run the B simulator self-test and record its result.", "Model B service manual MB2, rev 2, p.15", "2026-09-18")
+fact("fieldwise-guide", "Past D17 cases on Model B rev 2: 1 of 2 ended in a verified recovery; the other was not verified.", "CASE_HISTORY H1, H2", "2026-10-30")
+fact("fieldwise-guide", "Approved procedure: 'Indicator, self-test, verify', published by a reviewer and pinned to Model B rev 2.", "PROCEDURES T-IND v1", "2026-10-02")
+fact("fieldwise-guide", "This fix works every time on D17.", kind="uncited")
+fact("fieldwise-handoff", "Assigned 'Indicator, self-test, verify' (v1, pinned) to Teo for case C104. He can resume it on his phone.", "FIELDWISE.RUNS R-C104", DEMO_TODAY.isoformat(), kind="action")
+
 fact("readaroo-find", "The Long Haul Ledger (ebook): available now on your Riverside card.", "Riverside Public Library catalog", DEMO_TODAY.isoformat())
 fact("readaroo-find", "Cold Chain Stories (audiobook): available now on your County card.", "County Library catalog", DEMO_TODAY.isoformat())
 fact("readaroo-borrow", "Borrowed The Long Haul Ledger. Due Nov 25, 2026.", "Riverside Public Library loan L-88213", DEMO_TODAY.isoformat(), kind="action")
@@ -211,6 +237,7 @@ submissions = [
     {"submission_id": "S-502", "partner": "Commly", "listing_name": "Comp Clarity", "type": "New", "submitted_on": d(1), "manifest": 1, "scopes": 1, "privacy": 0, "evals": 1, "latency": 1, "injection": 1, "eval_pct": 92.1, "p95_ms": 2400, "risk": "Missing retention terms", "note": "Reads rep commission statements; privacy policy does not say how long they are kept.", "status": "pending"},
     {"submission_id": "S-503", "partner": "Sendwise", "listing_name": "Inbox Autopilot", "type": "New", "submitted_on": d(2), "manifest": 1, "scopes": 1, "privacy": 1, "evals": 0, "latency": 1, "injection": 0, "eval_pct": 84.0, "p95_ms": 3100, "risk": "Fails injection suite", "note": "Followed 3 of 40 planted instructions hidden in prospect replies. Eval pass rate below the 90% bar.", "status": "pending"},
     {"submission_id": "S-504", "partner": "Readaroo", "listing_name": "Readaroo v2.0", "type": "New", "submitted_on": d(0), "manifest": 1, "scopes": 1, "privacy": 1, "evals": 1, "latency": 1, "injection": 1, "eval_pct": 95.2, "p95_ms": 1100, "risk": "Consumer listing", "note": "Passed the all-audience review; payment links out to the partner's checkout.", "status": "pending"},
+    {"submission_id": "S-506", "partner": "Fieldwise", "listing_name": "Fieldwise v1.0", "type": "New", "submitted_on": d(0), "manifest": 1, "scopes": 1, "privacy": 1, "evals": 1, "latency": 1, "injection": 1, "eval_pct": 96.0, "p95_ms": 1400, "risk": "Writes to a service system", "note": "start_procedure assigns work to a technician, so it ships off by default and needs a named approver per run.", "status": "pending"},
     {"submission_id": "S-505", "partner": "Callsight", "listing_name": "Callsight Live Coach", "type": "New", "submitted_on": d(0), "manifest": 1, "scopes": 1, "privacy": 1, "evals": 1, "latency": 0, "injection": 1, "eval_pct": 93.5, "p95_ms": 7900, "risk": "Slow p95", "note": "Live hints take 7.9s at p95, past the 5s bar. Can list as post-call coaching only.", "status": "pending"},
 ]
 weeks = ["2026-09-07", "2026-09-14", "2026-09-21", "2026-09-28", "2026-10-05", "2026-10-12", "2026-10-19", "2026-10-26", "2026-11-02"]

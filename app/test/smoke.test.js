@@ -134,6 +134,19 @@ test('consumer listing: personal chat only, payment links out', async () => {
   assert.match(fine.body.link.url, /readaroo\.example/);
 });
 
+test('Fieldwise asks for the model first, then cites the manual and waits on the handoff', async () => {
+  const ask = await call('POST', '/api/run', { workspaceId: 'nw-service', listingId: 'fieldwise', promptId: 'fieldwise-d17', userId: 'ana' });
+  assert.equal(ask.body.status, 'answered');
+  assert.ok(ask.body.answer.claims.some(c => c.kind === 'unknown' && /no repair steps/.test(c.text)));
+  assert.ok(!ask.body.answer.claims.some(c => /^Step/.test(c.text)), 'no steps before the model is confirmed');
+  const guide = await call('POST', '/api/run', { workspaceId: 'nw-service', listingId: 'fieldwise', promptId: 'fieldwise-guide', userId: 'ana' });
+  assert.ok(guide.body.trace.some(t => t.state === 'reject' && t.detail.includes('works every time')));
+  assert.ok(guide.body.answer.claims.filter(c => /^Step/.test(c.text)).every(c => /MB2, rev 2, p\.1[45]/.test(c.source)));
+  const hand = await call('POST', '/api/run', { workspaceId: 'nw-service', listingId: 'fieldwise', promptId: 'fieldwise-handoff', userId: 'ana' });
+  assert.equal(hand.body.status, 'pending_approval');
+  assert.equal((await call('POST', `/api/approvals/${hand.body.approval.approval_id}/decide`, { userId: 'teo', decision: 'approve' })).status, 403);
+});
+
 test('spend cap stops calls once reached', async () => {
   assert.equal((await call('PUT', '/api/workspaces/nw-software/installs/credits/policy', { userId: 'kai', spendCap: 0.1 })).status, 200);
   const first = await call('POST', '/api/run', { workspaceId: 'nw-software', listingId: 'credits', promptId: 'credits-solve', userId: 'sam' });
@@ -145,7 +158,7 @@ test('spend cap stops calls once reached', async () => {
 
 test('review queue blocks failed checks and adds conditions', async () => {
   const q = await call('GET', '/api/review');
-  assert.equal(q.body.length, 5);
+  assert.equal(q.body.length, 6);
   assert.equal((await call('POST', '/api/review/S-503/decide', { decision: 'approved', reviewer: 'ops' })).status, 409, 'injection failure blocks approval');
   const orbit = await call('POST', '/api/review/S-501/decide', { decision: 'approved', reviewer: 'ops' });
   assert.match(orbit.body.condition, /re-consent/);

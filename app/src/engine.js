@@ -12,8 +12,8 @@ export const SURFACES = ['chat', 'data', 'slack'];
 export const PLANS = ['usage', 'team', 'annual'];
 export const PAY_VIA = ['commitment', 'invoice'];
 export const REVIEW_DECISIONS = ['approved', 'changes_requested', 'rejected'];
-const LISTING_WORKSPACE = { orbit: 'nw-freight', conviction: 'nw-capital', credits: 'nw-software', readaroo: 'personal-jordan' };
-const WORKSPACE_PERSONA = { 'nw-freight': 'jordan', 'nw-capital': 'avery', 'nw-software': 'sam', 'personal-jordan': 'jordan' };
+const LISTING_WORKSPACE = { orbit: 'nw-freight', conviction: 'nw-capital', credits: 'nw-software', fieldwise: 'nw-service', readaroo: 'personal-jordan' };
+const WORKSPACE_PERSONA = { 'nw-freight': 'jordan', 'nw-capital': 'avery', 'nw-software': 'sam', 'nw-service': 'ana', 'personal-jordan': 'jordan' };
 
 const newId = prefix => `${prefix}-${crypto.randomUUID().slice(0, 8)}`;
 const nowIso = () => new Date().toISOString();

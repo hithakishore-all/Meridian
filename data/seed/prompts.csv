@@ -8,6 +8,9 @@ conviction-export,conviction,export_to_deal_room,Export the Halden memo to the d
 credits-sim,credits,simulate_migration,Simulate moving our Pro plan from seats to credits at $0.10
 credits-solve,credits,price_solver,What credit price keeps revenue flat?
 credits-publish,credits,publish_price_book,Publish this price book for finance review
+fieldwise-d17,fieldwise,identify_unit,"Case C104: doors keep reopening, code D17. What should the technician do?"
+fieldwise-guide,fieldwise,cited_guidance,"Model B, revision 2 is confirmed. What are the approved steps?"
+fieldwise-handoff,fieldwise,start_procedure,Hand the approved procedure to Teo for case C104
 readaroo-find,readaroo,search_tonight,What can I read tonight on supply chains?
 readaroo-borrow,readaroo,borrow_title,Borrow The Long Haul Ledger
 readaroo-kids,readaroo,family_shelf,Add a dinosaur picture book to Maya's shelf

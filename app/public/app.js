@@ -3,7 +3,7 @@ const view = document.getElementById('view');
 const S = { tab: 'catalog', q: '', category: '', listing: null, ws: 'nw-freight', runListing: 'orbit', runUser: 'jordan', runPrompt: '', surface: 'chat', results: [], review: {} };
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const money = n => `$${Number(n || 0).toLocaleString('en-US', { maximumFractionDigits: 2 })}`;
-const DEFAULTS = { orbit: ['nw-freight', 'jordan'], conviction: ['nw-capital', 'avery'], credits: ['nw-software', 'sam'], readaroo: ['personal-jordan', 'jordan'] };
+const DEFAULTS = { orbit: ['nw-freight', 'jordan'], conviction: ['nw-capital', 'avery'], credits: ['nw-software', 'sam'], fieldwise: ['nw-service', 'ana'], readaroo: ['personal-jordan', 'jordan'] };
 
 function toast(msg) {
   const t = document.getElementById('toast');

@@ -2,4 +2,5 @@ workspace_id,listing_id,status,plan,pay_via,spend_cap_usd,human_write,pii_mask,p
 nw-freight,orbit,not_purchased,,,2000,1,1,1,,
 nw-capital,conviction,approved,annual,commitment,3000,1,1,3,noor,2026-10-12
 nw-software,credits,approved,annual,invoice,1500,1,1,2,kai,2026-09-02
+nw-service,fieldwise,approved,annual,commitment,1000,1,1,1,omar,2026-11-06
 personal-jordan,readaroo,approved,free,none,0,1,0,1,jordan,2026-10-20

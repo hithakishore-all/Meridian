@@ -94,6 +94,7 @@ Each featured listing is one tool server with read tools and at most one write o
 | GTM Orbit | `account_brief`, `buying_signals`, `draft_outreach` | `sync_to_crm` (off until IT enables it) | Northwind Freight, Jordan Lee |
 | Conviction AI | `diligence_memo` (VC), `portfolio_monitor` and `add_on_screen` (PE) | `export_to_deal_room` | Northwind Capital, Avery Chen |
 | Credit Simulator | `simulate_migration`, `price_solver`, `segment_impact` | `publish_price_book` | Northwind Software, Sam Ortiz |
+| Fieldwise | `identify_unit`, `cited_guidance`, `past_fixes` | `start_procedure` | Northwind Field Service, Ana Torres |
 | Readaroo | `search_tonight` | `borrow_title`, `family_shelf` (write); `pay_fine` (link) | Jordan's personal account |
 
 ## The run result

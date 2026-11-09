@@ -4,6 +4,8 @@
 
 **[Try the clickable demo](https://hithakishore-all.github.io/meridian/)** · no install, synthetic data · part of [my AI product portfolio](https://hithakishore-all.github.io)
 
+**Watch the 3-minute walkthrough** at the top of the demo page: a captioned, silent video of a buyer, IT, three agents (GTM Orbit, Conviction AI, Fieldwise) and the operator, with clickable chapters.
+
 Meridian is a B2B marketplace where companies discover, buy, govern and run third-party AI agents, and where the marketplace team proves those agents actually get used. Partners list one MCP-style tool server; buyers run it in a chat assistant, next to their data, or in Slack; every call passes one policy gateway that checks who is asking, what they may touch, and what it costs. This repo holds a working web console, policy gateway and Slack bot on Snowflake, plus an offline mode that needs no accounts.
 
 ![Run an agent: the validator rejects an uncited claim, a stale source is flagged, and a write waits for its owner](docs/screenshots/04-run-conviction-validator-and-approval.png)
@@ -85,7 +87,7 @@ Check your settings any time with `npm run check`; it lists exactly what is miss
 
 Follow the tabs left to right; together they are the whole marketplace lifecycle.
 
-1. **Catalog.** Search by the job you need done ("research accounts before sales calls"). Featured listings (GTM Orbit, Conviction AI, Credit Simulator, Readaroo) have working agents; the others are sample listings. Fieldnote Firmographics shows a stale-data badge; ICP Scout shows "SOC 2: Not provided".
+1. **Catalog.** Search by the job you need done ("research accounts before sales calls"). Featured listings (GTM Orbit, Conviction AI, Credit Simulator, Fieldwise, Readaroo) have working agents; the others are sample listings. Fieldnote Firmographics shows a stale-data badge; ICP Scout shows "SOC 2: Not provided".
 2. **Buy and deploy.** For Northwind Freight, buy GTM Orbit as Marcus Bell (procurement), then set the policy and click **Approve deployment** as Priya Raman (IT). Turn on `sync_to_crm` to try a governed write.
 3. **Run an agent.** Pick an agent, who you are acting as, and a surface, then a prompt. Each result shows the gateway trace, every claim with its evidence ID, warnings, and cost.
 4. **Approvals.** Writes wait here. Only the person who asked can approve. **Try approving as someone else** on the Run tab shows the refusal.
@@ -111,7 +113,7 @@ GTM Orbit only works in Slack after you deploy it in the web console (step 2 abo
 
 ## The demo records
 
-Ten fictional records, each proving one behavior.
+Eleven fictional records, each proving one behavior.
 
 | # | Record | What it demonstrates | Where to see it |
 | --- | --- | --- | --- |
@@ -125,6 +127,7 @@ Ten fictional records, each proving one behavior.
 | 8 | Inbox Autopilot submission | Fails the prompt-injection suite; approval is blocked | Review queue |
 | 9 | GTM Orbit v1.4 update | Adds a write scope; approval comes with re-consent | Review queue |
 | 10 | Riley Moss (Marketing) | A group IT did not enable is refused | Run Orbit acting as Riley |
+| 11 | Fieldwise case C104 | No repair steps until the model is confirmed; steps cite manual MB2 pages; "works every time" is rejected; the handoff to a technician waits for Ana | Run `fieldwise-d17`, `fieldwise-guide`, then `fieldwise-handoff` |
 
 ## How it works
 
@@ -302,7 +305,7 @@ Full list: [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md).
 ## FAQ and known limitations
 
 - **Is there a real model?** Not by default. Answers are assembled from cited demo facts so the demo is repeatable and runs on Snowflake trial accounts, where AI functions are blocked. Set `MODEL = cortex` on an account with Cortex to have a model reword them; the validator still checks every evidence ID.
-- **Are the other listings real products?** No. GTM Orbit, Conviction AI, Credit Simulator and Readaroo are the author's own prototypes shown as listings; every other listing, company and person is invented.
+- **Are the other listings real products?** No. GTM Orbit, Conviction AI, Credit Simulator, Fieldwise and Readaroo are the author's own prototypes shown as listings; every other listing, company and person is invented.
 - **Does approving send anything?** No. It records the action in Meridian.
 - **Offline data resets on restart.** That is intentional for demos. Live mode keeps state in Snowflake; run `sql/07_reset.sql` or press **Reset demo**.
 - **No sign-in.** The console lets you act as any demo person. A real deployment would use the company's identity provider.
@@ -311,3 +314,7 @@ Full list: [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md).
 ## License
 
 [MIT](LICENSE)
+
+## Re-recording the walkthrough video
+
+`scripts/record_walkthrough.py` drives the clickable demo with Playwright, adds a cursor, highlight boxes and caption cards, and captures frames through the Chrome screencast; `scripts/encode_walkthrough.py` turns them into an MP4 and a poster. Run `make video` (needs `pip install playwright` and ffmpeg). Pass `FONTS=` a `node_modules/@fontsource` folder when Google Fonts can't be reached, so the video keeps the demo's typefaces.
