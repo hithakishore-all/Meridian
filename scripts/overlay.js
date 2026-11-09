@@ -34,6 +34,8 @@
   #fw-card h1 svg{width:64px;height:64px}
   #fw-card .tag{font:500 18px/1.2 "IBM Plex Mono",ui-monospace,monospace;color:#F5B400;letter-spacing:.04em}
   #fw-card p{font-size:22px;max-width:760px;line-height:1.4;margin:0;color:#C8D0E6}
+  #fw-card .by{font:600 19px/1.3 "Source Sans 3","Segoe UI",system-ui,sans-serif;color:#fff;letter-spacing:.01em;margin-top:-4px}
+  #fw-card .by span{color:#8f9bbd;font-weight:400}
   #fw-card .fine{font:500 13px/1.3 "IBM Plex Mono",ui-monospace,monospace;color:#8f9bbd;text-transform:uppercase;letter-spacing:.08em;margin-top:18px}`;
   const CURSOR = '<svg viewBox="0 0 26 26"><path d="M4 2l17 11.5-7.4 1.4 4.3 8.2-3.3 1.7-4.3-8.3L4.6 21z" fill="#fff" stroke="#111" stroke-width="1.6" stroke-linejoin="round"/></svg>';
   const get = k => { try { return JSON.parse(localStorage.getItem(k) || "null"); } catch (e) { return null; } };

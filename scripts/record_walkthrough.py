@@ -160,11 +160,12 @@ async def main(out: Path, url: str, fonts: Path | None):
 
         # ---------- title ----------
         await page.evaluate("h => __fw.card(h)", f"""<h1>{LOGO}Meridian</h1><div class="tag">Every agent, governed and paid for in one place.</div>
+          <div class="by"><span>Designed and built by</span> Hitha Kishore</div>
           <p>A B2B agent marketplace, end to end: a buyer finds and buys an agent, IT governs it once, three agents run under policy, and the operator checks what gets used.</p>
           <div class="fine">Walkthrough of the clickable demo · no sound · all data is fictional</div>""")
         await wait(0.4)
         await rec.use(page)
-        await wait(4.2)
+        await wait(5.0)
         await page.evaluate("() => __fw.nocard()")
         await page.evaluate("() => __fw.cur(760, 300, true)")
 
@@ -289,6 +290,7 @@ async def main(out: Path, url: str, fonts: Path | None):
         # ---------- close ----------
         await page.evaluate("() => __fw.nocap()")
         await page.evaluate("h => __fw.card(h)", f"""<h1>{LOGO}Meridian</h1><div class="tag">Every agent, governed and paid for in one place.</div>
+          <div class="by"><span>Designed and built by</span> Hitha Kishore</div>
           <p>Buy on the commitment you have. IT governs once. Every claim cited, every write approved, every call metered.</p>
           <div class="fine">Try it yourself below · code: github.com/hithakishore-all/Meridian</div>""")
         await wait(4.5)
