@@ -4,7 +4,7 @@
 
 **[Try the clickable demo](https://hithakishore-all.github.io/meridian/)** · no install, synthetic data · part of [my AI product portfolio](https://hithakishore-all.github.io)
 
-**Watch the 3-minute walkthrough** at the top of the demo page: a captioned, silent video of a buyer, IT, three agents (GTM Orbit, Conviction AI, Fieldwise) and the operator, with clickable chapters.
+**[Watch the 3-minute walkthrough](https://www.loom.com/share/9b47050033fd48938348bf1d3af26932)** (also at the top of the demo page): a captioned, silent video of a buyer, IT, three agents (GTM Orbit, Conviction AI, Fieldwise) and the operator, with clickable chapters.
 
 Meridian is a B2B marketplace where companies discover, buy, govern and run third-party AI agents, and where the marketplace team proves those agents actually get used. Partners list one MCP-style tool server; buyers run it in a chat assistant, next to their data, or in Slack; every call passes one policy gateway that checks who is asking, what they may touch, and what it costs. This repo holds a working web console, policy gateway and Slack bot on Snowflake, plus an offline mode that needs no accounts.
 
